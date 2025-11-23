@@ -17,26 +17,28 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <span class="logo-text">Dignitate</span>
-                <span class="logo-tagline">Dignity in Dementia</span>
+                <img src="images/logo.png" alt="Dignitate - Dignity in Dementia" class="logo-image">
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active">Home</a>
+                        <a href="/" class="nav__link active">Home</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">About Us</a>
+                        <a href="/about" class="nav__link">About Us</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#services" class="nav__link">Services</a>
+                        <a href="/our-story" class="nav__link">Our Story</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#courses" class="nav__link">Courses</a>
+                        <a href="/faq" class="nav__link">FAQ</a>
                     </li>
                     <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contact</a>
+                        <a href="/founder" class="nav__link">Our Founder</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="/contact" class="nav__link">Contact Us</a>
                     </li>
                 </ul>
                 <button class="nav__close" id="nav-close" aria-label="Close menu">
@@ -48,7 +50,7 @@
             </div>
 
             <div class="nav__buttons">
-                <a href="#contact" class="btn btn--primary nav__cta">Get Support</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" class="btn btn--donate nav__cta" target="_blank" rel="noopener">Donate</a>
                 <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -89,12 +91,7 @@
                 <div class="hero__image-wrapper">
                     <div class="hero__shape hero__shape--1"></div>
                     <div class="hero__shape hero__shape--2"></div>
-                    <div class="hero__placeholder">
-                        <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                        <span>Compassion & Care</span>
-                    </div>
+                    <img src="images/hero-elizabeth.jpg" alt="Dignitate founder Elizabeth" class="hero__img">
                 </div>
             </div>
         </div>
@@ -112,20 +109,16 @@
         <div class="container">
             <div class="stats__grid">
                 <div class="stat__item">
-                    <span class="stat__number" data-count="850000">850,000+</span>
-                    <span class="stat__label">People with dementia in UK</span>
+                    <span class="stat__number" data-count="210">210</span>
+                    <span class="stat__label">Community members engaged</span>
                 </div>
                 <div class="stat__item">
-                    <span class="stat__number">Weekly</span>
-                    <span class="stat__label">Online drop-in sessions</span>
+                    <span class="stat__number" data-count="54">54</span>
+                    <span class="stat__label">Carer and individual service beneficiaries</span>
                 </div>
                 <div class="stat__item">
-                    <span class="stat__number">Expert-Led</span>
-                    <span class="stat__label">Courses & workshops</span>
-                </div>
-                <div class="stat__item">
-                    <span class="stat__number">24/7</span>
-                    <span class="stat__label">Community support</span>
+                    <span class="stat__number" data-count="78">78</span>
+                    <span class="stat__label">Culturally tailored educational sessions</span>
                 </div>
             </div>
         </div>
@@ -195,15 +188,7 @@
                 </div>
                 <div class="about__image">
                     <div class="about__image-wrapper">
-                        <div class="about__placeholder">
-                            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <span>Community Support</span>
-                        </div>
+                        <img src="images/community.jpg" alt="Dignitate Community Support" class="about__img">
                     </div>
                 </div>
             </div>
@@ -464,13 +449,32 @@
                 </blockquote>
                 <div class="testimonial__author">
                     <div class="testimonial__avatar">
-                        <span>MG</span>
+                        <img src="images/founder-photo.jpg" alt="Malcolm Gill" class="testimonial__avatar-img">
                     </div>
                     <div class="testimonial__info">
                         <strong>Malcolm Gill</strong>
                         <span>Founder, Dignitate</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter section" id="newsletter">
+        <div class="container">
+            <div class="newsletter__content">
+                <h2 class="newsletter__title">Stay Connected</h2>
+                <p class="newsletter__description">
+                    Subscribe to our newsletter for updates on events, resources, and community news.
+                </p>
+                <form class="newsletter__form" id="newsletter-form">
+                    <div class="newsletter__inputs">
+                        <input type="text" name="newsletter-name" placeholder="Your Name" class="newsletter__input" required>
+                        <input type="email" name="newsletter-email" placeholder="Your Email" class="newsletter__input" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Subscribe</button>
+                </form>
             </div>
         </div>
     </section>
@@ -585,13 +589,33 @@
             <div class="footer__content">
                 <div class="footer__brand">
                     <a href="#" class="footer__logo">
-                        <span class="logo-text">Dignitate</span>
-                        <span class="logo-tagline">Dignity in Dementia</span>
+                        <img src="images/logo.png" alt="Dignitate" class="footer__logo-img">
                     </a>
                     <p class="footer__description">
                         Registered Charity Number: 1196886<br>
                         Community-led dementia support for the South Asian community.
                     </p>
+                    <div class="footer__social">
+                        <a href="https://facebook.com/dignitate" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://instagram.com/dignitate" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/company/dignitate" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="footer__links">

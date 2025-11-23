@@ -310,11 +310,11 @@
         const statsObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const countElement = statsSection.querySelector('[data-count]');
-                    if (countElement) {
+                    const countElements = statsSection.querySelectorAll('[data-count]');
+                    countElements.forEach(countElement => {
                         const target = parseInt(countElement.dataset.count);
                         animateCounter(countElement, target);
-                    }
+                    });
                     statsObserver.unobserve(entry.target);
                 }
             });
@@ -349,6 +349,62 @@
 
     // ===== PERFORMANCE: PASSIVE EVENT LISTENERS =====
     // Already using passive listeners for scroll events by default in modern browsers
+
+    // ===== NEWSLETTER FORM =====
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(newsletterForm);
+            const name = formData.get('newsletter-name');
+            const email = formData.get('newsletter-email');
+
+            // Show success message
+            const button = newsletterForm.querySelector('button');
+            const originalText = button.textContent;
+            button.textContent = 'Subscribed!';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+                newsletterForm.reset();
+            }, 3000);
+
+            console.log('Newsletter subscription:', { name, email });
+        });
+    }
+
+    // ===== FAQ ACCORDION =====
+    const faqQuestions = document.querySelectorAll('.faq__question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            document.querySelectorAll('.faq__item').forEach(faq => {
+                faq.classList.remove('active');
+                faq.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+            });
+
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    // ===== CHARACTER COUNTER =====
+    const messageTextarea = document.getElementById('message');
+    const charCount = document.getElementById('char-count');
+    if (messageTextarea && charCount) {
+        messageTextarea.addEventListener('input', () => {
+            charCount.textContent = messageTextarea.value.length;
+        });
+    }
 
     // ===== CONSOLE MESSAGE =====
     console.log('%cDignitate', 'font-size: 24px; font-weight: bold; color: #6366f1;');
