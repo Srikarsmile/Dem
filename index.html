@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dignitate - Community-led dementia support for the South Asian community. Providing culturally sensitive care, education, and peer support.">
-    <meta name="keywords" content="dementia, South Asian, support, charity, carers, family support, cultural dementia care">
+    <meta name="description"
+        content="Dignitate - Community-led dementia support for the South Asian community. Providing culturally sensitive care, education, and peer support.">
+    <meta name="keywords"
+        content="dementia, South Asian, support, charity, carers, family support, cultural dementia care">
     <meta name="author" content="Dignitate">
     <title>Dignitate | Dignity in Dementia</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- Navigation -->
     <header class="header" id="header">
@@ -38,7 +44,27 @@
                         <a href="/founder" class="nav__link">Our Founder</a>
                     </li>
                     <li class="nav__item">
-                        <a href="/contact" class="nav__link">Contact Us</a>
+                        <a href="#contact" class="nav__link btn btn--cta">Get Support</a>
+                    </li>
+                    <li class="nav__item">
+                        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                            <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="theme-icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" style="display: none;">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
                 <button class="nav__close" id="nav-close" aria-label="Close menu">
@@ -50,7 +76,8 @@
             </div>
 
             <div class="nav__buttons">
-                <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" class="btn btn--donate nav__cta" target="_blank" rel="noopener">Donate</a>
+                <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" class="btn btn--donate nav__cta"
+                    target="_blank" rel="noopener">Donate</a>
                 <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -66,20 +93,20 @@
     <section class="hero" id="home">
         <div class="hero__container container">
             <div class="hero__content">
-                <span class="hero__subtitle">Community-Led Dementia Support</span>
+                <span class="hero__subtitle reveal-up">Community-Led Dementia Support</span>
                 <h1 class="hero__title">
-                    Supporting Families Through the
-                    <span class="text-gradient">Dementia Journey</span>
+                    <span class="reveal-text-wrapper"><span class="reveal-text">Dignity in</span></span>
+                    <span class="reveal-text-wrapper"><span class="reveal-text text-gradient">Dementia</span></span>
                 </h1>
-                <p class="hero__description">
-                    Dignitate provides culturally sensitive support for those with dementia,
-                    their carers and families from the South Asian community. Together, we
-                    empower those often unseen and underserved.
+                <p class="hero__description reveal-up delay-200">
+                    Community-led support for those with dementia, their carers and families from the South Asian
+                    community.
                 </p>
-                <div class="hero__buttons">
+                <div class="hero__buttons reveal-up delay-300">
                     <a href="#services" class="btn btn--primary btn--lg">
                         Our Services
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
@@ -88,7 +115,7 @@
                 </div>
             </div>
             <div class="hero__image">
-                <div class="hero__image-wrapper">
+                <div class="hero__image-wrapper reveal-in delay-200">
                     <div class="hero__shape hero__shape--1"></div>
                     <div class="hero__shape hero__shape--2"></div>
                     <img src="images/hero-elizabeth.jpg" alt="Dignitate founder Elizabeth" class="hero__img">
@@ -108,15 +135,15 @@
     <section class="stats">
         <div class="container">
             <div class="stats__grid">
-                <div class="stat__item">
+                <div class="stat__item reveal-up">
                     <span class="stat__number" data-count="210">210</span>
                     <span class="stat__label">Community members engaged</span>
                 </div>
-                <div class="stat__item">
+                <div class="stat__item reveal-up delay-100">
                     <span class="stat__number" data-count="54">54</span>
                     <span class="stat__label">Carer and individual service beneficiaries</span>
                 </div>
-                <div class="stat__item">
+                <div class="stat__item reveal-up delay-200">
                     <span class="stat__number" data-count="78">78</span>
                     <span class="stat__label">Culturally tailored educational sessions</span>
                 </div>
@@ -129,25 +156,41 @@
         <div class="container">
             <div class="about__content">
                 <div class="about__data">
-                    <span class="section__subtitle">About Dignitate</span>
-                    <h2 class="section__title">Placing Dignity at the Heart of Dementia Care</h2>
-                    <p class="about__description">
-                        Dignitate is a registered charity (1196886) founded by Malcolm Gill, who lost his
-                        mother to vascular dementia in 2022. As a British Asian, Malcolm was raised in a
-                        culture that often perceives dementia as a mental condition rather than a
-                        neurodegenerative disease.
+                    <span class="section__subtitle reveal-up handwriting">Our Story</span>
+                    <h2 class="section__title reveal-up delay-100">A Personal Journey</h2>
+                    <p class="about__description reveal-up delay-200">
+                        After spending 11 years caring for my mother, who had vascular dementia, I felt compelled to
+                        start a charity to help others going through similar situations. Throughout my experience, I
+                        learned the ins and outs of being a caregiver and found that there were many challenges and
+                        difficulties that come with caring for a loved one with dementia.
                     </p>
-                    <p class="about__description">
-                        Our mission is to place dementia and caring within cultural communities at the
-                        heart of health equity. We empower carers and families—often unseen and
-                        underserved—to access support, share experiences, and sustain their wellbeing
-                        alongside those they care for.
+                    <p class="about__description reveal-up delay-200">
+                        However, I also learned the importance of support, community, and resources in making the
+                        journey more manageable. Through my charity, I hope to provide a platform for caregivers to
+                        share their experiences, connect with others in similar situations, and learn from my own
+                        experiences. I want to let others know that they are not alone and that there are people who
+                        care and understand what they are going through.
                     </p>
+
+                    <div class="about__mission reveal-up delay-300"
+                        style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--border);">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Mission</h3>
+                        <p style="margin-bottom: 1rem; color: var(--text-secondary);">Dignitate empowers cultural carers
+                            and families, with dementia as our core focus, through community-led networks, culturally
+                            competent support, and preventative care. We amplify carers’ voices, dismantle barriers, and
+                            build stronger, more inclusive communities.</p>
+
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--text-primary);">Vision</h3>
+                        <p style="color: var(--text-secondary);">We envision a world where cultural carers are fully
+                            valued, supported, and recognised, with services and communities working together to ensure
+                            equity, dignity, and inclusion.</p>
+                    </div>
 
                     <div class="about__features">
                         <div class="about__feature">
                             <div class="about__feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                 </svg>
@@ -159,7 +202,8 @@
                         </div>
                         <div class="about__feature">
                             <div class="about__feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
@@ -173,7 +217,8 @@
                         </div>
                         <div class="about__feature">
                             <div class="about__feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <path d="M12 16v-4"></path>
                                     <path d="M12 8h.01"></path>
@@ -187,7 +232,7 @@
                     </div>
                 </div>
                 <div class="about__image">
-                    <div class="about__image-wrapper">
+                    <div class="about__image-wrapper reveal-in delay-300">
                         <img src="images/community.jpg" alt="Dignitate Community Support" class="about__img">
                     </div>
                 </div>
@@ -208,9 +253,10 @@
             </div>
 
             <div class="services__grid">
-                <article class="service__card">
+                <article class="service__card reveal-up">
                     <div class="service__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                             <line x1="16" y1="2" x2="16" y2="6"></line>
                             <line x1="8" y1="2" x2="8" y2="6"></line>
@@ -224,16 +270,18 @@
                     </p>
                     <a href="#contact" class="service__link">
                         Join a Session
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
                 </article>
 
-                <article class="service__card">
+                <article class="service__card reveal-up delay-100">
                     <div class="service__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
                         </svg>
                     </div>
@@ -244,16 +292,18 @@
                     </p>
                     <a href="#contact" class="service__link">
                         Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
                 </article>
 
-                <article class="service__card">
+                <article class="service__card reveal-up delay-200">
                     <div class="service__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                             <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                         </svg>
@@ -265,16 +315,18 @@
                     </p>
                     <a href="#courses" class="service__link">
                         View Workshops
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
                     </a>
                 </article>
 
-                <article class="service__card">
+                <article class="service__card reveal-up delay-300">
                     <div class="service__icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
                             <line x1="12" y1="8" x2="12" y2="12"></line>
                             <line x1="12" y1="16" x2="12.01" y2="16"></line>
@@ -287,7 +339,8 @@
                     </p>
                     <a href="#contact" class="service__link">
                         Get Resources
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
                             <line x1="5" y1="12" x2="19" y2="12"></line>
                             <polyline points="12 5 19 12 12 19"></polyline>
                         </svg>
@@ -310,7 +363,7 @@
             </div>
 
             <div class="courses__grid">
-                <article class="course__card">
+                <article class="course__card reveal-up">
                     <div class="course__badge">Popular</div>
                     <div class="course__content">
                         <h3 class="course__title">Understanding Early Signs of Dementia</h3>
@@ -321,19 +374,22 @@
                         </p>
                         <ul class="course__features">
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Culturally sensitive approach
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Practical tips for families
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Expert-led sessions
@@ -343,7 +399,7 @@
                     </div>
                 </article>
 
-                <article class="course__card">
+                <article class="course__card reveal-up delay-100">
                     <div class="course__content">
                         <h3 class="course__title">Multi-Sensory Stimulation</h3>
                         <p class="course__description">
@@ -352,19 +408,22 @@
                         </p>
                         <ul class="course__features">
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Hands-on techniques
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Cultural music & memories
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 At-home activities
@@ -374,7 +433,7 @@
                     </div>
                 </article>
 
-                <article class="course__card">
+                <article class="course__card reveal-up delay-200">
                     <div class="course__content">
                         <h3 class="course__title">Anticipatory Loss & Grief</h3>
                         <p class="course__description">
@@ -383,19 +442,22 @@
                         </p>
                         <ul class="course__features">
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Emotional support strategies
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Self-care for carers
                             </li>
                             <li>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <polyline points="20 6 9 17 4 12"></polyline>
                                 </svg>
                                 Peer discussion groups
@@ -411,7 +473,7 @@
     <!-- Partnership Section -->
     <section class="partnership section">
         <div class="container">
-            <div class="partnership__content">
+            <div class="partnership__content reveal-up">
                 <div class="partnership__text">
                     <span class="section__subtitle">Our Partnership</span>
                     <h2 class="section__title">Working with NHS Our Future Health</h2>
@@ -425,7 +487,8 @@
                 </div>
                 <div class="partnership__logo">
                     <div class="partnership__placeholder">
-                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
                             <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
                         </svg>
                         <span>NHS Our Future Health</span>
@@ -438,9 +501,10 @@
     <!-- Testimonial Section -->
     <section class="testimonial section">
         <div class="container">
-            <div class="testimonial__content">
+            <div class="testimonial__content reveal-up">
                 <svg class="testimonial__quote" width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    <path
+                        d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
                 <blockquote class="testimonial__text">
                     "My mother's dementia changed the course of my life. After losing her in 2022,
@@ -463,15 +527,18 @@
     <!-- Newsletter Section -->
     <section class="newsletter section" id="newsletter">
         <div class="container">
-            <div class="newsletter__content">
-                <h2 class="newsletter__title">Stay Connected</h2>
+            <div class="newsletter__content reveal-up">
+                <h2 class="newsletter__title">Join our community</h2>
                 <p class="newsletter__description">
-                    Subscribe to our newsletter for updates on events, resources, and community news.
+                    Stay informed about what’s going on at Dignitate: Education, Signposting, Collaborations, and
+                    upcoming activities and events.
                 </p>
                 <form class="newsletter__form" id="newsletter-form">
                     <div class="newsletter__inputs">
-                        <input type="text" name="newsletter-name" placeholder="Your Name" class="newsletter__input" required>
-                        <input type="email" name="newsletter-email" placeholder="Your Email" class="newsletter__input" required>
+                        <input type="text" name="newsletter-name" placeholder="Your Name" class="newsletter__input"
+                            required>
+                        <input type="email" name="newsletter-email" placeholder="Your Email" class="newsletter__input"
+                            required>
                     </div>
                     <button type="submit" class="btn btn--primary">Subscribe</button>
                 </form>
@@ -482,7 +549,7 @@
     <!-- Contact Section -->
     <section class="contact section" id="contact">
         <div class="container">
-            <div class="contact__content">
+            <div class="contact__content reveal-up">
                 <div class="contact__info">
                     <span class="section__subtitle">Get in Touch</span>
                     <h2 class="section__title">We're Here to Help</h2>
@@ -494,8 +561,11 @@
                     <div class="contact__details">
                         <div class="contact__item">
                             <div class="contact__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                    </path>
                                     <polyline points="22,6 12,13 2,6"></polyline>
                                 </svg>
                             </div>
@@ -507,8 +577,11 @@
 
                         <div class="contact__item">
                             <div class="contact__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
                                 </svg>
                             </div>
                             <div>
@@ -519,7 +592,8 @@
 
                         <div class="contact__item">
                             <div class="contact__icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                     <circle cx="12" cy="10" r="3"></circle>
                                 </svg>
@@ -572,7 +646,8 @@
 
                         <button type="submit" class="btn btn--primary btn--full btn--lg">
                             Send Message
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                             </svg>
@@ -596,21 +671,27 @@
                         Community-led dementia support for the South Asian community.
                     </p>
                     <div class="footer__social">
-                        <a href="https://facebook.com/dignitate" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                        <a href="https://facebook.com/dignitate" class="footer__social-link" aria-label="Facebook"
+                            target="_blank" rel="noopener">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                             </svg>
                         </a>
-                        <a href="https://instagram.com/dignitate" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <a href="https://instagram.com/dignitate" class="footer__social-link" aria-label="Instagram"
+                            target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                             </svg>
                         </a>
-                        <a href="https://linkedin.com/company/dignitate" class="footer__social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <a href="https://linkedin.com/company/dignitate" class="footer__social-link"
+                            aria-label="LinkedIn" target="_blank" rel="noopener">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
                                 <rect x="2" y="9" width="4" height="12"></rect>
                                 <circle cx="4" cy="4" r="2"></circle>
                             </svg>
@@ -662,4 +743,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

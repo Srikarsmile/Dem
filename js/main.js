@@ -3,7 +3,7 @@
  * Enhanced interactivity and user experience
  */
 
-(function() {
+(function () {
     'use strict';
 
     // ===== DOM ELEMENTS =====
@@ -91,7 +91,7 @@
 
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
 
             if (targetId === '#') return;
@@ -115,7 +115,7 @@
 
     // ===== CONTACT FORM HANDLING =====
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Get form data
@@ -258,26 +258,54 @@
         }, 5000);
     }
 
-    // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
+    // ===== CINEMATIC TEXT REVEAL =====
+    const splitText = (element) => {
+        const text = element.textContent.trim();
+        const words = text.split(' ');
+        element.innerHTML = '';
+        words.forEach(word => {
+            const wrapper = document.createElement('span');
+            wrapper.className = 'reveal-text-wrapper';
+            const span = document.createElement('span');
+            span.className = 'reveal-text';
+            span.textContent = word + ' ';
+            wrapper.appendChild(span);
+            element.appendChild(wrapper);
+        });
+    };
+
+    // ===== INTERSECTION OBSERVER =====
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.15
     };
 
     const animateOnScroll = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animationPlayState = 'running';
+                entry.target.classList.add('visible');
+
+                // Trigger children animations if any
+                const children = entry.target.querySelectorAll('.reveal-text');
+                children.forEach((child, index) => {
+                    child.style.animationPlayState = 'running';
+                });
+
                 animateOnScroll.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // Observe elements with animation
-    document.querySelectorAll('.service__card, .course__card').forEach(el => {
+    // Observe elements
+    document.querySelectorAll('.reveal-up, .reveal-in, .hero__title').forEach(el => {
         el.style.animationPlayState = 'paused';
         animateOnScroll.observe(el);
+
+        // Pause children too
+        const children = el.querySelectorAll('.reveal-text');
+        children.forEach(child => child.style.animationPlayState = 'paused');
     });
 
     // ===== COUNTER ANIMATION FOR STATS =====
@@ -371,31 +399,87 @@
                 button.disabled = false;
                 newsletterForm.reset();
             }, 3000);
-
             console.log('Newsletter subscription:', { name, email });
         });
     }
 
-    // ===== FAQ ACCORDION =====
-    const faqQuestions = document.querySelectorAll('.faq__question');
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', () => {
-            const item = question.parentElement;
-            const isActive = item.classList.contains('active');
+    // ===== THEME TOGGLE =====
+    const themeToggle = document.getElementById('theme-toggle');
+    const sunIcon = document.querySelector('.theme-icon-sun');
+    const moonIcon = document.querySelector('.theme-icon-moon');
+    const body = document.body;
 
-            // Close all items
-            document.querySelectorAll('.faq__item').forEach(faq => {
-                faq.classList.remove('active');
-                faq.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
-            });
+    // Check for saved theme preference or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-            // Open clicked item if it wasn't active
-            if (!isActive) {
-                item.classList.add('active');
-                question.setAttribute('aria-expanded', 'true');
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+        body.setAttribute('data-theme', 'dark');
+        if (sunIcon && moonIcon) {
+            sunIcon.style.display = 'none';
+            moonIcon.style.display = 'block';
+        }
+    } else {
+        body.removeAttribute('data-theme');
+        if (sunIcon && moonIcon) {
+            sunIcon.style.display = 'block';
+            moonIcon.style.display = 'none';
+        }
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+                if (sunIcon && moonIcon) {
+                    sunIcon.style.display = 'block';
+                    moonIcon.style.display = 'none';
+                }
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                if (sunIcon && moonIcon) {
+                    sunIcon.style.display = 'none';
+                    moonIcon.style.display = 'block';
+                }
             }
         });
+    }
+
+
+    // ===== FAQ ACCORDION =====
+    const accordionItems = document.querySelectorAll('.accordion__item');
+
+    accordionItems.forEach((item) => {
+        const header = item.querySelector('.accordion__header');
+        if (header) {
+            header.addEventListener('click', () => {
+                const openItem = document.querySelector('.accordion-open');
+
+                toggleItem(item);
+
+                if (openItem && openItem !== item) {
+                    toggleItem(openItem);
+                }
+            });
+        }
     });
+
+    const toggleItem = (item) => {
+        const accordionContent = item.querySelector('.accordion__content');
+        if (accordionContent) {
+            if (item.classList.contains('accordion-open')) {
+                accordionContent.removeAttribute('style');
+                item.classList.remove('accordion-open');
+                item.querySelector('.accordion__header').setAttribute('aria-expanded', 'false');
+            } else {
+                accordionContent.style.height = accordionContent.scrollHeight + 'px';
+                item.classList.add('accordion-open');
+                item.querySelector('.accordion__header').setAttribute('aria-expanded', 'true');
+            }
+        }
+    };
 
     // ===== CHARACTER COUNTER =====
     const messageTextarea = document.getElementById('message');
