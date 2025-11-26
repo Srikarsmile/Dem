@@ -410,10 +410,12 @@
     const body = document.body;
 
     // Check for saved theme preference or system preference
+    // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    // Default to light mode unless user explicitly saved 'dark'
+    // We intentionally ignore system preference to default to "day mode" as requested
 
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    if (savedTheme === 'dark') {
         body.setAttribute('data-theme', 'dark');
         if (sunIcon && moonIcon) {
             sunIcon.style.display = 'none';
