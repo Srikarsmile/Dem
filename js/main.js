@@ -455,7 +455,7 @@
         const header = item.querySelector('.accordion__header');
         if (header) {
             header.addEventListener('click', () => {
-                const openItem = document.querySelector('.accordion-open');
+                const openItem = document.querySelector('.accordion__item.active');
 
                 toggleItem(item);
 
@@ -469,13 +469,11 @@
     const toggleItem = (item) => {
         const accordionContent = item.querySelector('.accordion__content');
         if (accordionContent) {
-            if (item.classList.contains('accordion-open')) {
-                accordionContent.removeAttribute('style');
-                item.classList.remove('accordion-open');
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
                 item.querySelector('.accordion__header').setAttribute('aria-expanded', 'false');
             } else {
-                accordionContent.style.height = accordionContent.scrollHeight + 'px';
-                item.classList.add('accordion-open');
+                item.classList.add('active');
                 item.querySelector('.accordion__header').setAttribute('aria-expanded', 'true');
             }
         }

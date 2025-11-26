@@ -97,186 +97,225 @@
     <!-- FAQ Content -->
     <section class="faq-page section">
         <div class="container">
-            <div class="accordion">
-                <!-- Question 1 -->
-                <div class="accordion__item">
-                    <button class="accordion__header" aria-expanded="false">
-                        <span>What is dementia?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="accordion__content">
-                        <div class="accordion__body">
-                            <p>Dementia is a decline in cognitive function that is severe enough to interfere with daily
-                                activities. It is caused by various underlying conditions that damage brain cells.</p>
-                            <p><strong>Alzheimer's disease</strong> is the most common cause, but other types include:
-                            </p>
-                            <ul>
-                                <li>Vascular dementia</li>
-                                <li>Dementia with Lewy bodies</li>
-                                <li>Frontotemporal dementia</li>
-                                <li>Mixed dementia</li>
-                            </ul>
-                            <p>While dementia is currently incurable, early diagnosis can help slow its progression and
-                                improve quality of life for both the person with dementia and their carers.</p>
-                        </div>
+            <div class="faq-layout">
+                <!-- Sidebar / Categories -->
+                <aside class="faq-sidebar">
+                    <div class="faq-categories">
+                        <h3>Categories</h3>
+                        <ul>
+                            <li><a href="#basics" class="active">Dementia Basics</a></li>
+                            <li><a href="#symptoms">Symptoms & Types</a></li>
+                            <li><a href="#treatment">Treatment & Care</a></li>
+                            <li><a href="#support">Support Services</a></li>
+                        </ul>
                     </div>
-                </div>
-
-                <!-- Question 2 -->
-                <div class="accordion__item">
-                    <button class="accordion__header" aria-expanded="false">
-                        <span>What are the symptoms of dementia?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="accordion__content">
-                        <div class="accordion__body">
-                            <p>Dementia symptoms can vary, but commonly include:</p>
-                            <ol>
-                                <li><strong>Memory loss</strong> - Especially forgetting recently learned information
-                                </li>
-                                <li><strong>Communication difficulties</strong> - Trouble finding words or following
-                                    conversations</li>
-                                <li><strong>Planning problems</strong> - Difficulty solving problems or making plans
-                                </li>
-                                <li><strong>Loss of familiar task ability</strong> - Struggling with routine tasks like
-                                    cooking or paying bills</li>
-                                <li><strong>Poor judgment</strong> - Making unusual decisions about money or personal
-                                    care</li>
-                                <li><strong>Mood and behavior changes</strong> - Depression, anxiety, or personality
-                                    shifts</li>
-                                <li><strong>Motivation loss</strong> - Withdrawing from social activities or hobbies
-                                </li>
-                                <li><strong>Spatial awareness issues</strong> - Problems judging distances or
-                                    recognizing colors</li>
-                                <li><strong>Inability to recognize</strong> familiar people or objects</li>
-                            </ol>
-                            <p>If you notice these symptoms in yourself or a loved one, consult a healthcare
-                                professional for evaluation.</p>
-                        </div>
+                    <div class="faq-contact-card">
+                        <h3>Still have questions?</h3>
+                        <p>We're here to help you navigate this journey.</p>
+                        <a href="/contact" class="btn btn--primary btn--full">Contact Us</a>
                     </div>
-                </div>
+                </aside>
 
-                <!-- Question 3 -->
-                <div class="accordion__item">
-                    <button class="accordion__header" aria-expanded="false">
-                        <span>How many types of dementia exist?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="accordion__content">
-                        <div class="accordion__body">
-                            <p>There are six main categories of dementia:</p>
-                            <div class="faq__cards">
-                                <div class="faq__card">
-                                    <h4>Alzheimer's Disease</h4>
-                                    <p>The most common type, accounting for 60-80% of cases. Characterized by plaques
-                                        and tangles in the brain.</p>
+                <!-- Main Content -->
+                <div class="faq-content">
+                    <!-- Basics Section -->
+                    <div id="basics" class="faq-section">
+                        <h2 class="faq-section__title">Dementia Basics</h2>
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <button class="accordion__header" aria-expanded="false">
+                                    <span>What is dementia?</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="accordion__content">
+                                    <div class="accordion__body">
+                                        <p>Dementia is a decline in cognitive function that is severe enough to
+                                            interfere with daily
+                                            activities. It is caused by various underlying conditions that damage brain
+                                            cells.</p>
+                                        <p><strong>Alzheimer's disease</strong> is the most common cause, but other
+                                            types include:
+                                        </p>
+                                        <ul>
+                                            <li>Vascular dementia</li>
+                                            <li>Dementia with Lewy bodies</li>
+                                            <li>Frontotemporal dementia</li>
+                                            <li>Mixed dementia</li>
+                                        </ul>
+                                        <p>While dementia is currently incurable, early diagnosis can help slow its
+                                            progression and
+                                            improve quality of life for both the person with dementia and their carers.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div class="faq__card">
-                                    <h4>Vascular Dementia</h4>
-                                    <p>Caused by reduced blood flow to the brain, often following a stroke or series of
-                                        small strokes.</p>
-                                </div>
-                                <div class="faq__card">
-                                    <h4>Dementia with Lewy Bodies (DLB)</h4>
-                                    <p>Caused by abnormal protein deposits in nerve cells, leading to movement and sleep
-                                        problems.</p>
-                                </div>
-                                <div class="faq__card">
-                                    <h4>Frontotemporal Dementia (FTD)</h4>
-                                    <p>Affects the frontal and temporal lobes, causing personality and behavior changes.
-                                    </p>
-                                </div>
-                                <div class="faq__card">
-                                    <h4>Mixed Dementia</h4>
-                                    <p>A combination of two or more types of dementia occurring together.</p>
-                                </div>
-                                <div class="faq__card">
-                                    <h4>Young-Onset Dementia</h4>
-                                    <p>Dementia diagnosed before age 65, which can be any type but presents unique
-                                        challenges.</p>
+                            </div>
+
+                            <div class="accordion__item">
+                                <button class="accordion__header" aria-expanded="false">
+                                    <span>What causes dementia?</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="accordion__content">
+                                    <div class="accordion__body">
+                                        <p>Dementia is caused by damage to brain cells that affects their ability to
+                                            communicate.
+                                            This damage can result from:</p>
+                                        <ul>
+                                            <li><strong>Abnormal protein buildup</strong> - Such as amyloid plaques and
+                                                tau tangles
+                                                in Alzheimer's</li>
+                                            <li><strong>Reduced blood flow</strong> - Damage to blood vessels supplying
+                                                the brain
+                                            </li>
+                                            <li><strong>Genetic mutations</strong> - Some forms of dementia run in
+                                                families</li>
+                                            <li><strong>Traumatic brain injury</strong> - Repeated head injuries can
+                                                increase risk
+                                            </li>
+                                        </ul>
+                                        <p>Risk factors include age, family history, cardiovascular disease, diabetes,
+                                            smoking,
+                                            excessive alcohol consumption, and lack of physical activity.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Question 4 -->
-                <div class="accordion__item">
-                    <button class="accordion__header" aria-expanded="false">
-                        <span>What causes dementia?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="accordion__content">
-                        <div class="accordion__body">
-                            <p>Dementia is caused by damage to brain cells that affects their ability to communicate.
-                                This damage can result from:</p>
-                            <ul>
-                                <li><strong>Abnormal protein buildup</strong> - Such as amyloid plaques and tau tangles
-                                    in Alzheimer's</li>
-                                <li><strong>Reduced blood flow</strong> - Damage to blood vessels supplying the brain
-                                </li>
-                                <li><strong>Genetic mutations</strong> - Some forms of dementia run in families</li>
-                                <li><strong>Traumatic brain injury</strong> - Repeated head injuries can increase risk
-                                </li>
-                                <li><strong>Other neurological conditions</strong> - Parkinson's disease, Huntington's
-                                    disease, and others</li>
-                            </ul>
-                            <p>Risk factors include age, family history, cardiovascular disease, diabetes, smoking,
-                                excessive alcohol consumption, and lack of physical activity.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Question 5 -->
-                <div class="accordion__item">
-                    <button class="accordion__header" aria-expanded="false">
-                        <span>What treatment is available?</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
-                    </button>
-                    <div class="accordion__content">
-                        <div class="accordion__body">
-                            <p>While there is no cure for most types of dementia, several treatment approaches can help
-                                manage symptoms and improve quality of life:</p>
-                            <div class="treatment__grid">
-                                <div class="treatment__item">
-                                    <h4>1. Medications</h4>
-                                    <p>Cholinesterase inhibitors (donepezil, rivastigmine, galantamine) and memantine
-                                        can help manage cognitive symptoms temporarily.</p>
-                                </div>
-                                <div class="treatment__item">
-                                    <h4>2. Non-Pharmacological Interventions</h4>
-                                    <p>Cognitive stimulation therapy, reminiscence therapy, music therapy, and
-                                        occupational therapy can help maintain function and wellbeing.</p>
-                                </div>
-                                <div class="treatment__item">
-                                    <h4>3. Lifestyle Modifications</h4>
-                                    <p>Regular exercise, healthy diet, adequate sleep, social engagement, and mental
-                                        stimulation can all help slow progression.</p>
-                                </div>
-                                <div class="treatment__item">
-                                    <h4>4. Caregiver Support Systems</h4>
-                                    <p>Support for carers is essential. This includes respite care, support groups,
-                                        education, and counseling to manage the emotional and physical demands of
-                                        caregiving.</p>
+                    <!-- Symptoms Section -->
+                    <div id="symptoms" class="faq-section">
+                        <h2 class="faq-section__title">Symptoms & Types</h2>
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <button class="accordion__header" aria-expanded="false">
+                                    <span>What are the symptoms of dementia?</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="accordion__content">
+                                    <div class="accordion__body">
+                                        <p>Dementia symptoms can vary, but commonly include:</p>
+                                        <div class="symptoms-grid">
+                                            <div class="symptom-card">
+                                                <div class="symptom-icon">🧠</div>
+                                                <h4>Memory Loss</h4>
+                                                <p>Forgetting recently learned information.</p>
+                                            </div>
+                                            <div class="symptom-card">
+                                                <div class="symptom-icon">🗣️</div>
+                                                <h4>Communication</h4>
+                                                <p>Trouble finding words or following conversations.</p>
+                                            </div>
+                                            <div class="symptom-card">
+                                                <div class="symptom-icon">📅</div>
+                                                <h4>Planning</h4>
+                                                <p>Difficulty solving problems or making plans.</p>
+                                            </div>
+                                            <div class="symptom-card">
+                                                <div class="symptom-icon">🍳</div>
+                                                <h4>Daily Tasks</h4>
+                                                <p>Struggling with routine tasks like cooking.</p>
+                                            </div>
+                                        </div>
+                                        <p class="mt-4">If you notice these symptoms in yourself or a loved one, consult
+                                            a healthcare
+                                            professional for evaluation.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <p class="faq__cta">Dignitate offers culturally sensitive support and education for carers.
-                                <a href="/contact">Contact us</a> to learn more about our services.</p>
+
+                            <div class="accordion__item">
+                                <button class="accordion__header" aria-expanded="false">
+                                    <span>How many types of dementia exist?</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="accordion__content">
+                                    <div class="accordion__body">
+                                        <p>There are six main categories of dementia:</p>
+                                        <div class="faq__cards">
+                                            <div class="faq__card">
+                                                <h4>Alzheimer's Disease</h4>
+                                                <p>The most common type, accounting for 60-80% of cases. Characterized
+                                                    by plaques
+                                                    and tangles in the brain.</p>
+                                            </div>
+                                            <div class="faq__card">
+                                                <h4>Vascular Dementia</h4>
+                                                <p>Caused by reduced blood flow to the brain, often following a stroke
+                                                    or series of
+                                                    small strokes.</p>
+                                            </div>
+                                            <div class="faq__card">
+                                                <h4>Dementia with Lewy Bodies</h4>
+                                                <p>Caused by abnormal protein deposits in nerve cells, leading to
+                                                    movement and sleep
+                                                    problems.</p>
+                                            </div>
+                                            <div class="faq__card">
+                                                <h4>Frontotemporal Dementia</h4>
+                                                <p>Affects the frontal and temporal lobes, causing personality and
+                                                    behavior changes.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Treatment Section -->
+                    <div id="treatment" class="faq-section">
+                        <h2 class="faq-section__title">Treatment & Care</h2>
+                        <div class="accordion">
+                            <div class="accordion__item">
+                                <button class="accordion__header" aria-expanded="false">
+                                    <span>What treatment is available?</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="accordion__content">
+                                    <div class="accordion__body">
+                                        <p>While there is no cure for most types of dementia, several treatment
+                                            approaches can help
+                                            manage symptoms and improve quality of life:</p>
+                                        <div class="treatment__grid">
+                                            <div class="treatment__item">
+                                                <h4>1. Medications</h4>
+                                                <p>Cholinesterase inhibitors and memantine can help manage cognitive
+                                                    symptoms temporarily.</p>
+                                            </div>
+                                            <div class="treatment__item">
+                                                <h4>2. Non-Pharmacological</h4>
+                                                <p>Cognitive stimulation therapy, reminiscence therapy, and music
+                                                    therapy.</p>
+                                            </div>
+                                            <div class="treatment__item">
+                                                <h4>3. Lifestyle</h4>
+                                                <p>Regular exercise, healthy diet, adequate sleep, and social
+                                                    engagement.</p>
+                                            </div>
+                                            <div class="treatment__item">
+                                                <h4>4. Caregiver Support</h4>
+                                                <p>Respite care, support groups, education, and counseling.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -356,7 +395,7 @@
             </div>
 
             <div class="footer__bottom">
-                <p>&copy; 2024 Dignitate. All rights reserved.</p>
+                <p>&copy; 2025 Dignitate. All rights reserved.</p>
                 <div class="footer__legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
