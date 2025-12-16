@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { Heart, Phone, Video, Users, Calendar, BookOpen, MessageCircle, CheckCircle, ArrowRight, Smartphone, Lock, Sparkles, FileText, Activity, Microscope } from 'lucide-react';
 import { FadeInOnScroll } from '@/components/Parallax';
 
-export default function Support() {
+function SupportContent() {
     const searchParams = useSearchParams();
     const [activeTab, setActiveTab] = useState('for-carers');
 
@@ -414,5 +414,13 @@ export default function Support() {
                 </div>
             </section>
         </div>
+    );
+}
+
+export default function Support() {
+    return (
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+            <SupportContent />
+        </Suspense>
     );
 }

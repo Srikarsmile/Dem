@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,7 +15,7 @@ import { Mic, Video, Radio, FileText, Download, UserCheck, MessageSquare, Quote,
 import { FadeInOnScroll } from '@/components/Parallax';
 import { CountUp } from '@/components/CountUp';
 
-export default function ProfessionalServices() {
+function ProfessionalServicesContent() {
     const searchParams = useSearchParams();
     const [activeTab, setActiveTab] = useState('training');
 
@@ -506,5 +506,13 @@ export default function ProfessionalServices() {
                 </div>
             </section>
         </div>
+    );
+}
+
+export default function ProfessionalServices() {
+    return (
+        <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+            <ProfessionalServicesContent />
+        </Suspense>
     );
 }
