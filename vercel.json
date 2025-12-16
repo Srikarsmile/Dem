@@ -22,6 +22,26 @@
             "destination": "/contact.html"
         },
         {
+            "source": "/for-carers",
+            "destination": "/for-carers.html"
+        },
+        {
+            "source": "/training",
+            "destination": "/training.html"
+        },
+        {
+            "source": "/digital",
+            "destination": "/digital.html"
+        },
+        {
+            "source": "/speaking",
+            "destination": "/speaking.html"
+        },
+        {
+            "source": "/impact",
+            "destination": "/impact.html"
+        },
+        {
             "source": "/(.*)",
             "destination": "/$1"
         }
