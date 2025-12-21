@@ -12,9 +12,9 @@ export default function OurFounder() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-blue/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-accent-blue">Our Founder</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-[#2e8b8f]">Our Founder</h1>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                         Meet Malcolm Gill - carer, advocate, and champion of cultural carers.
                     </p>
@@ -63,7 +63,7 @@ export default function OurFounder() {
                                     His unique combination of <strong>lived experience, cultural insight, and strategic vision</strong> has made him a sought-after speaker at conferences, a trusted advisor to healthcare organizations, and a powerful advocate for policy change.
                                 </p>
                                 <p>
-                                    Malcolm's work focuses on breaking down the barriers that prevent marginalized communities from accessing dementia support—addressing issues of stigma, language, and systemic inequality.
+                                    Malcolm's work focuses on breaking down the barriers that prevent marginalized communities from accessing dementia support - addressing issues of stigma, language, and systemic inequality.
                                 </p>
                             </div>
 
@@ -85,7 +85,7 @@ export default function OurFounder() {
             </section>
 
             {/* Credentials & Expertise */}
-            <section className="py-20 bg-muted/30">
+            <section className="py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight mb-4">Credentials & Expertise</h2>
@@ -143,10 +143,10 @@ export default function OurFounder() {
                         </Card>
 
                         {/* Recent Engagements */}
-                        <Card className="border-accent-purple/20">
+                        <Card className="border-[#9bdbd9]">
                             <CardHeader>
                                 <CardTitle className="flex items-center gap-2">
-                                    <Calendar className="h-5 w-5 text-accent-purple" />
+                                    <Calendar className="h-5 w-5 text-[#5d9b97]" />
                                     Engagements & Recognition
                                 </CardTitle>
                             </CardHeader>
@@ -160,7 +160,7 @@ export default function OurFounder() {
                                         "Policy Advisory & Consultations"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-center gap-3">
-                                            <div className="h-2 w-2 rounded-full bg-accent-purple" />
+                                            <div className="h-2 w-2 rounded-full bg-[#5d9b97]" />
                                             <span>{item}</span>
                                         </li>
                                     ))}
@@ -182,7 +182,7 @@ export default function OurFounder() {
                         <blockquote className="text-2xl md:text-3xl font-light leading-relaxed mb-8">
                             "Dignitate is an organisation passionate about giving back dignity to our elders who are experiencing dementia. Care is culture. When we understand this, everything changes."
                         </blockquote>
-                        <div className="font-bold text-xl">— Malcolm Gill</div>
+                        <div className="font-bold text-xl">- Malcolm Gill</div>
                     </div>
                 </div>
             </section>

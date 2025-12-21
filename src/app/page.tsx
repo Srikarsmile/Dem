@@ -37,7 +37,7 @@ export default function Home() {
             </h1>
 
             <p className="max-w-[800px] text-lg md:text-xl text-white/95 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200 drop-shadow-lg">
-              We combine lived experience, cultural intelligence, and digital innovation to support carers and influence systems — in the UK and globally.
+              We combine lived experience, cultural intelligence, and digital innovation to support carers and influence systems - in the UK and globally.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-300">
@@ -45,11 +45,6 @@ export default function Home() {
                 <Button size="lg" className="h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 bg-accent-coral hover:bg-accent-coral/90 text-white border-none">
                   <Heart className="mr-2 h-5 w-5" />
                   I'm a Carer – Get Support
-                </Button>
-              </Link>
-              <Link href="/professional-services?tab=partnerships">
-                <Button size="lg" variant="outline" className="h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
-                  For Partners & Commissioners
                 </Button>
               </Link>
               <Link href="/professional-services?tab=speaking">
@@ -75,10 +70,10 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <FadeInOnScroll>
             <div className="text-center mb-12">
-              <span className="text-accent-purple font-semibold">What We Do</span>
+              <span className="text-accent-teal font-semibold">What We Do</span>
               <h2 className="text-3xl font-bold tracking-tight mt-2">Four Pillars of Impact</h2>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                Dignitate is more than a local charity — it's a movement with depth and scope.
+                Dignitate is more than a local charity - it's a movement with depth and scope.
               </p>
             </div>
           </FadeInOnScroll>
@@ -90,32 +85,32 @@ export default function Home() {
                 title: "Support for Cultural Carers",
                 desc: "1-to-1 calls, peer support, and culturally sensitive resources for carers from diverse communities.",
                 link: "/support",
-                color: "text-accent-coral",
-                bgColor: "bg-accent-coral/10"
+                color: "text-[#2e8b8f]",
+                bgColor: "bg-[#dffffe]"
               },
               {
                 icon: BookOpen,
                 title: "Education & Training",
                 desc: "Culturally grounded dementia education for carers, families, and healthcare professionals.",
                 link: "/professional-services?tab=training",
-                color: "text-accent-purple",
-                bgColor: "bg-accent-purple/10"
+                color: "text-[#5d9b97]",
+                bgColor: "bg-[#dffffe]"
               },
               {
                 icon: Smartphone,
                 title: "Digital Innovation",
-                desc: "Building the Cultural Carers App — AI-powered support designed with lived experience at its heart.",
+                desc: "Building the Cultural Carers App - AI-powered support designed with lived experience at its heart.",
                 link: "/support?tab=digital",
-                color: "text-accent-teal",
-                bgColor: "bg-accent-teal/10"
+                color: "text-[#2e8b8f]",
+                bgColor: "bg-[#9bdbd9]/30"
               },
               {
                 icon: Mic,
                 title: "Advocacy & Speaking",
-                desc: "Book Malcolm Gill for conferences, training, and media — driving policy change and shifting narratives.",
+                desc: "Book Malcolm Gill for conferences, training, and media - driving policy change and shifting narratives.",
                 link: "/professional-services?tab=speaking",
-                color: "text-accent-blue",
-                bgColor: "bg-accent-blue/10"
+                color: "text-[#5d9b97]",
+                bgColor: "bg-[#dffffe]"
               }
             ].map((pillar, i) => (
               <FadeInOnScroll key={i} delay={i * 100}>
@@ -141,12 +136,12 @@ export default function Home() {
         </div>
       </ScrollingWallpaper>
 
-      {/* Our Story Section - Clean layout with light background */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      {/* Our Story Section - Light cyan brand background */}
+      <section className="py-12 md:py-20 bg-[#dffffe]">
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <FadeInOnScroll>
-              <div className="relative aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative aspect-video md:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl ring-4 ring-[#9bdbd9]/50">
                 <Image
                   src="/images/malcolm-new-portrait.jpg"
                   alt="Malcolm Gill"
@@ -191,10 +186,10 @@ export default function Home() {
             ].map((stat, i) => (
               <FadeInOnScroll key={i} delay={i * 100}>
                 <div className="space-y-2">
-                  <div className="text-4xl md:text-5xl font-bold text-accent-teal">
+                  <div className="text-4xl md:text-5xl font-bold text-[#9bdbd9]">
                     <CountUp end={stat.num} suffix={stat.suffix} duration={2500} />
                   </div>
-                  <div className="text-sm font-medium opacity-80 uppercase tracking-wider">{stat.label}</div>
+                  <div className="text-sm font-medium opacity-90 uppercase tracking-wider">{stat.label}</div>
                 </div>
               </FadeInOnScroll>
             ))}
@@ -202,34 +197,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* NHS Partnership - Clean layout */}
-      <section className="py-12 md:py-20 bg-muted/30">
+      {/* NHS Our Future Health Partnership - Clean layout */}
+      <section className="py-12 md:py-20 bg-white">
         <div className="container px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <FadeInOnScroll>
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <div className="inline-block px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-sm font-medium mb-4">
+                  <div className="inline-block px-3 py-1 rounded-full bg-[#c4dcdc] text-[#2e8b8f] text-sm font-medium mb-4">
                     Strategic Partnership
                   </div>
-                  <h2 className="text-3xl font-bold mb-4">NHS Our Future Health Partner</h2>
-                  <blockquote className="italic text-muted-foreground border-l-4 border-accent-teal pl-4 mb-6">
-                    "We are proud to Partner with the NHS Our Future Health — the UK's largest health research programme — to help improve healthcare for dementia patients from diverse communities."
+                  <h2 className="text-3xl font-bold mb-4">Our Future Health Partner</h2>
+                  <blockquote className="italic text-muted-foreground border-l-4 border-[#5d9b97] pl-4 mb-6">
+                    "We are proud to Partner with Our Future Health - the UK's largest health research programme - to help improve healthcare for dementia patients from diverse communities."
                   </blockquote>
-                  <p className="font-bold text-right text-primary">— Malcolm Gill, Founder</p>
+                  <p className="font-bold text-right text-[#2e8b8f]">- Malcolm Gill, Founder</p>
                   <div className="mt-6">
                     <Link href="https://ourfuturehealth.org.uk/news/my-mothers-dementia-changed-the-course-of-my-life-i-want-to-help-beat-this-terrible-disease/" target="_blank">
-                      <Button variant="outline">Read the NHS Feature →</Button>
+                      <Button variant="outline">Read the Feature →</Button>
                     </Link>
                   </div>
                 </div>
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-white flex items-center justify-center p-8">
                   <Image
-                    src="/images/nhs-partnership.png"
-                    alt="NHS Our Future Health Partnership"
+                    src="/images/our-future-health-logo.webp"
+                    alt="Our Future Health Partnership"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-contain p-4"
                   />
                 </div>
               </div>
@@ -238,45 +233,45 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Event - Every Dish Has A Story */}
-      <section className="py-12 md:py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+      {/* Featured Event - Every Dish Has A Story - Brand Teal Theme */}
+      <section className="py-12 md:py-20 bg-gradient-to-br from-[#dffffe] to-[#c4dcdc]">
         <div className="container px-4 md:px-6">
           <FadeInOnScroll>
             <div className="text-center mb-10">
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent-coral text-white rounded-full text-sm font-bold uppercase tracking-wider">
+              <span className="inline-flex items-center gap-2 px-4 py-2 bg-[#2e8b8f] text-white rounded-full text-sm font-bold uppercase tracking-wider">
                 🌟 Featured Event
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-6 text-gray-900">Every Dish Has A Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mt-6 text-[#2e8b8f]">Every Dish Has A Story</h2>
               <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-                Part of the <strong>Breaking Barriers Project</strong> — weaving a tapestry of connection through culture, stories, and shared experience.
+                Part of the <strong>Breaking Barriers Project</strong> - weaving a tapestry of connection through culture, stories, and shared experience.
               </p>
             </div>
           </FadeInOnScroll>
 
           <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
             <FadeInOnScroll delay={100}>
-              <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl ring-4 ring-[#9bdbd9]/50">
                 <Image
-                  src="/images/every-dish-has-a-story.jpg"
+                  src="/images/every-dish-story-v2.jpg"
                   alt="Every Dish Has A Story - Breaking Barriers Project"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  width={600}
+                  height={800}
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </FadeInOnScroll>
 
             <FadeInOnScroll delay={200}>
-              <Card className="border-2 border-amber-200 bg-white/80 backdrop-blur h-full">
+              <Card className="border-2 border-[#9bdbd9] bg-white/90 backdrop-blur h-full">
                 <CardContent className="p-8 space-y-6 flex flex-col justify-center">
-                  <div className="bg-gradient-to-r from-amber-100 to-orange-100 rounded-xl p-6 border-l-4 border-amber-500">
+                  <div className="bg-gradient-to-r from-[#dffffe] to-[#c4dcdc] rounded-xl p-6 border-l-4 border-[#5d9b97]">
                     <p className="text-lg text-gray-800 italic leading-relaxed">
-                      "At Dignitate, we know cultural carers often give so much of themselves, with little time to pause. That's why we created The Carer's Table — because carers deserve to be cared for too."
+                      "At Dignitate, we know cultural carers often give so much of themselves, with little time to pause. That's why we created The Carer's Table."
                     </p>
-                    <p className="mt-4 font-bold text-amber-700">— Malcolm Gill, Founder</p>
+                    <p className="mt-4 font-bold text-[#2e8b8f]">- Malcolm Gill, Founder</p>
                   </div>
                   <Link href="/news" className="block">
-                    <Button className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white">
+                    <Button className="w-full bg-[#5d9b97] hover:bg-[#2e8b8f] text-white">
                       Read More <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -301,7 +296,7 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 drop-shadow-lg">Our Mission</h2>
                 <p className="text-xl opacity-95 leading-relaxed drop-shadow-md">
-                  Dignitate advances cultural equity in caregiving through global advocacy, digital innovation, and culturally competent training. We empower carers and influence systems by combining lived experience, community insight, and strategic partnerships — driving policy change, shifting narratives, and building an international Cultural Carers movement.
+                  Dignitate advances cultural equity in caregiving through global advocacy, digital innovation, and culturally competent training. We empower carers and influence systems by combining lived experience, community insight, and strategic partnerships - driving policy change, shifting narratives, and building an international Cultural Carers movement.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -309,7 +304,7 @@ export default function Home() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 drop-shadow-lg">Our Vision</h2>
                 <p className="text-xl opacity-95 leading-relaxed drop-shadow-md">
-                  A world where cultural carers are recognised as key partners in health systems, and where culturally competent care is embedded globally — influencing policy, shaping practice, and transforming the dementia journey for families everywhere.
+                  A world where cultural carers are recognised as key partners in health systems, and where culturally competent care is embedded globally - influencing policy, shaping practice, and transforming the dementia journey for families everywhere.
                 </p>
               </div>
             </FadeInOnScroll>
@@ -333,30 +328,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Join Community Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Join Community Section - Light Cyan Background */}
+      <section className="py-16 bg-[#dffffe]">
         <div className="container px-4 md:px-6">
           <FadeInOnScroll>
-            <h2 className="text-3xl font-bold mb-8 text-center">Join the Movement</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center text-[#2e8b8f]">Join the Movement</h2>
           </FadeInOnScroll>
           <FadeInOnScroll delay={150}>
-            <div className="max-w-3xl mx-auto bg-card p-8 rounded-2xl shadow-sm border border-border/50">
+            <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-lg border-2 border-[#c4dcdc]">
               <h4 className="font-bold text-xl mb-6">Stay informed about what's going on at Dignitate:</h4>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
-                  <BookOpen className="h-6 w-6 text-accent-purple shrink-0" />
+                  <BookOpen className="h-6 w-6 text-[#5d9b97] shrink-0" />
                   <span><strong>Education</strong> – Stay informed with valuable knowledge that will empower both you and your families.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ArrowRight className="h-6 w-6 text-accent-blue shrink-0" />
+                  <ArrowRight className="h-6 w-6 text-[#2e8b8f] shrink-0" />
                   <span><strong>Signposting</strong> – Get connected with trustworthy sources of help and advice.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-accent-teal shrink-0" />
+                  <Users className="h-6 w-6 text-[#5d9b97] shrink-0" />
                   <span><strong>Who we are working with</strong> – Discover collaborations and the wonderful organisations that share our journey.</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Heart className="h-6 w-6 text-accent-coral shrink-0" />
+                  <Heart className="h-6 w-6 text-[#2e8b8f] shrink-0" />
                   <span><strong>Upcoming Dignitate activities and events</strong> – Be the first to know about events that make a real difference and how you can be part of them.</span>
                 </li>
                 <li className="pl-9 text-muted-foreground italic">and more!</li>

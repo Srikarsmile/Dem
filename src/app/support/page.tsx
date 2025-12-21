@@ -28,7 +28,7 @@ function SupportContent() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-coral/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">Support & Resources</h1>
                     <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150 max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ function SupportContent() {
                         {/* TAB 1: FOR CARERS */}
                         <TabsContent value="for-carers" className="space-y-16">
                             {/* Intro */}
-                            <div className="bg-muted/30 py-12">
+                            <div className="bg-[#dffffe] py-12">
                                 <FadeInOnScroll parallax parallaxSpeed={0.15}>
                                     <div className="max-w-4xl mx-auto text-center">
                                         <p className="text-lg text-muted-foreground leading-relaxed">
@@ -171,7 +171,7 @@ function SupportContent() {
                             </div>
 
                             {/* CTA */}
-                            <div className="py-16 bg-accent-coral text-white rounded-2xl">
+                            <div className="py-16 bg-[#2e8b8f] text-white rounded-2xl">
                                 <div className="container px-4 md:px-6 text-center">
                                     <h2 className="text-3xl font-bold mb-4">Ready to Connect?</h2>
                                     <p className="text-xl opacity-90 max-w-2xl mx-auto mb-8">
@@ -179,7 +179,7 @@ function SupportContent() {
                                     </p>
                                     <div className="flex flex-wrap justify-center gap-4">
                                         <Link href="/contact">
-                                            <Button size="lg" className="bg-white text-accent-coral hover:bg-white/90">Get Support Now</Button>
+                                            <Button size="lg" className="bg-white text-[#2e8b8f] hover:bg-white/90">Get Support Now</Button>
                                         </Link>
                                         <Link href="/news">
                                             <Button size="lg" className="bg-transparent border-2 border-white text-white hover:bg-white/20">View Our Events</Button>
@@ -260,7 +260,7 @@ function SupportContent() {
                             </div>
 
                             {/* Digital Vision */}
-                            <div className="py-12 bg-muted/30 rounded-2xl">
+                            <div className="py-12 bg-[#dffffe] rounded-2xl">
                                 <div className="container px-4 md:px-6">
                                     <div className="text-center mb-16">
                                         <h2 className="text-3xl font-bold tracking-tight mb-4">Digital Vision</h2>

@@ -21,7 +21,7 @@ function ProfessionalServicesContent() {
 
     useEffect(() => {
         const tab = searchParams.get('tab');
-        if (tab && ['training', 'speaking', 'partnerships'].includes(tab)) {
+        if (tab && ['training', 'speaking'].includes(tab)) {
             setActiveTab(tab);
         }
     }, [searchParams]);
@@ -29,11 +29,11 @@ function ProfessionalServicesContent() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-purple/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">Professional Services</h1>
                     <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150 max-w-2xl mx-auto">
-                        Training, speaking engagements, and partnership opportunities for organizations.
+                        Training and speaking engagements for organizations.
                     </p>
                 </div>
             </section>
@@ -42,10 +42,9 @@ function ProfessionalServicesContent() {
             <section className="py-12">
                 <div className="container px-4 md:px-6">
                     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                        <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-12">
+                        <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
                             <TabsTrigger value="training">Training</TabsTrigger>
                             <TabsTrigger value="speaking">Speaking</TabsTrigger>
-                            <TabsTrigger value="partnerships">Partnerships</TabsTrigger>
                         </TabsList>
 
                         {/* TAB 1: TRAINING */}
@@ -61,7 +60,7 @@ function ProfessionalServicesContent() {
                                             </p>
                                             <div className="flex gap-4">
                                                 <Link href="/contact">
-                                                    <Button size="lg" className="bg-accent-purple text-white hover:bg-accent-purple/90">Enquire Now</Button>
+                                                    <Button size="lg" className="bg-[#2e8b8f] text-white hover:bg-[#2e8b8f]/90">Enquire Now</Button>
                                                 </Link>
                                             </div>
                                         </div>
@@ -79,7 +78,7 @@ function ProfessionalServicesContent() {
                             </div>
 
                             {/* Who We Train */}
-                            <div className="bg-muted/30 py-16 rounded-2xl">
+                            <div className="bg-[#dffffe] py-16 rounded-2xl">
                                 <FadeInOnScroll parallax parallaxSpeed={0.15}>
                                     <div className="text-center mb-12">
                                         <h2 className="text-3xl font-bold tracking-tight mb-4">Who We Train</h2>
@@ -130,7 +129,7 @@ function ProfessionalServicesContent() {
                                                 "End-of-life planning and transitions"
                                             ].map((topic, i) => (
                                                 <div key={i} className="flex items-center gap-3 py-2">
-                                                    <div className="h-2 w-2 rounded-full bg-accent-purple shrink-0" />
+                                                    <div className="h-2 w-2 rounded-full bg-[#5d9b97] shrink-0" />
                                                     <span>{topic}</span>
                                                 </div>
                                             ))}
@@ -140,7 +139,7 @@ function ProfessionalServicesContent() {
                             </div>
 
                             {/* Testimonials */}
-                            <div className="bg-muted/30 py-16 rounded-2xl">
+                            <div className="bg-[#dffffe] py-16 rounded-2xl">
                                 <FadeInOnScroll>
                                     <div className="text-center mb-12">
                                         <h2 className="text-3xl font-bold tracking-tight mb-4">What People Say</h2>
@@ -171,7 +170,7 @@ function ProfessionalServicesContent() {
                             </div>
 
                             {/* CTA */}
-                            <div className="py-16 bg-accent-purple text-white rounded-2xl">
+                            <div className="py-16 bg-[#2e8b8f] text-white rounded-2xl">
                                 <div className="container px-4 md:px-6 text-center">
                                     <h2 className="text-3xl font-bold mb-4">Ready to Book Training?</h2>
                                     <p className="text-xl opacity-90 mb-8 max-w-xl mx-auto">
@@ -179,7 +178,7 @@ function ProfessionalServicesContent() {
                                     </p>
                                     <div className="flex flex-wrap gap-4 justify-center">
                                         <Link href="/contact">
-                                            <Button size="lg" className="bg-white text-accent-purple hover:bg-white/90">Get in Touch</Button>
+                                            <Button size="lg" className="bg-white text-[#2e8b8f] hover:bg-white/90">Get in Touch</Button>
                                         </Link>
                                         <Button size="lg" variant="outline" className="border-2 border-white bg-white/10 text-white hover:bg-white/20" onClick={() => setActiveTab('speaking')}>Book Malcolm to Speak</Button>
                                     </div>
@@ -241,7 +240,7 @@ function ProfessionalServicesContent() {
                             </div>
 
                             {/* Speaking Topics */}
-                            <div className="bg-muted/30 py-16 rounded-2xl" id="topics">
+                            <div className="bg-[#dffffe] py-16 rounded-2xl" id="topics">
                                 <div className="container px-4 md:px-6">
                                     <div className="text-center mb-16">
                                         <h2 className="text-3xl font-bold tracking-tight mb-4">Speaking Topics</h2>
@@ -302,7 +301,7 @@ function ProfessionalServicesContent() {
                             </div>
 
                             {/* Booking Form */}
-                            <div className="py-16 bg-muted/30 rounded-2xl" id="booking">
+                            <div className="py-16 bg-[#dffffe] rounded-2xl" id="booking">
                                 <div className="container px-4 md:px-6 max-w-3xl">
                                     <div className="text-center mb-12">
                                         <h2 className="text-3xl font-bold mb-4">Book Malcolm for Your Event</h2>
@@ -368,137 +367,6 @@ function ProfessionalServicesContent() {
                                             <p className="text-center text-xs text-muted-foreground">We typically respond within 2-3 working days.</p>
                                         </form>
                                     </Card>
-                                </div>
-                            </div>
-                        </TabsContent>
-
-                        {/* TAB 3: PARTNERSHIPS */}
-                        <TabsContent value="partnerships" className="space-y-16">
-                            {/* Featured Partner - NHS */}
-                            <div>
-                                <div className="max-w-5xl mx-auto">
-                                    <Card className="border-2 border-accent-teal/30 bg-gradient-to-br from-accent-teal/5 to-accent-blue/5 overflow-hidden">
-                                        <CardContent className="p-8 md:p-12">
-                                            <div className="grid md:grid-cols-2 gap-8 items-center">
-                                                <div>
-                                                    <div className="inline-block px-3 py-1 rounded-full bg-accent-teal text-white text-sm font-bold mb-4">
-                                                        Official Partner
-                                                    </div>
-                                                    <h2 className="text-3xl font-bold mb-4">NHS Our Future Health</h2>
-                                                    <p className="text-muted-foreground mb-4">
-                                                        We're proud to partner with the UK's largest health research programme. Together, we're working to increase participation from diverse cultural communities in vital dementia research, ensuring future treatments work for everyone.
-                                                    </p>
-                                                    <p className="text-muted-foreground mb-6">
-                                                        This partnership enables us to contribute to groundbreaking research while advocating for the unique needs of cultural communities affected by dementia.
-                                                    </p>
-                                                    <blockquote className="italic border-l-4 border-accent-teal pl-4 py-2 text-muted-foreground mb-6">
-                                                        "We are lucky enough to Partner with the NHS Our Future Health. The UK's largest health research programme to help improve healthcare for dementia patients."
-                                                        <span className="block mt-2 not-italic font-bold text-foreground">— Malcolm Gill, Founder</span>
-                                                    </blockquote>
-                                                    <Link href="https://ourfuturehealth.org.uk/news/my-mothers-dementia-changed-the-course-of-my-life-i-want-to-help-beat-this-terrible-disease/" target="_blank">
-                                                        <Button className="bg-accent-teal text-white hover:bg-accent-teal/90">
-                                                            Read the Feature Article <ExternalLink className="ml-2 h-4 w-4" />
-                                                        </Button>
-                                                    </Link>
-                                                </div>
-                                                <div className="flex items-center justify-center">
-                                                    <div className="relative w-64 h-48">
-                                                        <Image
-                                                            src="/images/nhs-logo.png"
-                                                            alt="NHS Our Future Health"
-                                                            fill
-                                                            className="object-contain"
-                                                        />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </div>
-                            </div>
-
-                            {/* Partnership Areas */}
-                            <div className="bg-muted/30 py-16 rounded-2xl">
-                                <div className="container px-4 md:px-6">
-                                    <div className="text-center mb-16">
-                                        <h2 className="text-3xl font-bold tracking-tight mb-4">How We Partner</h2>
-                                        <p className="text-muted-foreground max-w-2xl mx-auto">
-                                            We collaborate with organisations across healthcare, research, and community sectors.
-                                        </p>
-                                    </div>
-
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-                                        {[
-                                            { icon: Building, title: "NHS & Healthcare", desc: "Training programmes and cultural competence for healthcare providers" },
-                                            { icon: Users, title: "Research Institutions", desc: "Collaborating on dementia research with diverse community participation" },
-                                            { icon: Heart, title: "Community Organisations", desc: "Working with faith groups, community centres, and cultural organisations" },
-                                            { icon: Handshake, title: "Corporate Partners", desc: "CSR initiatives and sponsorship opportunities to scale our impact" }
-                                        ].map((area, i) => (
-                                            <Card key={i} className="text-center group hover:shadow-lg transition-all">
-                                                <CardContent className="pt-8">
-                                                    <div className="p-4 rounded-full bg-muted w-16 h-16 mx-auto mb-4 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                                                        <area.icon className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
-                                                    </div>
-                                                    <h3 className="font-bold text-lg mb-2">{area.title}</h3>
-                                                    <p className="text-sm text-muted-foreground">{area.desc}</p>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Impact Together */}
-                            <div className="py-16 bg-primary text-primary-foreground rounded-2xl">
-                                <div className="container px-4 md:px-6">
-                                    <div className="max-w-4xl mx-auto text-center">
-                                        <h2 className="text-3xl font-bold mb-8">Together, We've Achieved</h2>
-                                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                                            {[
-                                                { num: 500, suffix: "+", label: "Carers Supported" },
-                                                { num: 1000, suffix: "+", label: "Professionals Trained" },
-                                                { num: 50, suffix: "+", label: "Training Sessions" },
-                                                { num: 30, suffix: "+", label: "Speaking Events" }
-                                            ].map((stat, i) => (
-                                                <div key={i} className="space-y-2">
-                                                    <div className="text-4xl font-bold">
-                                                        <CountUp end={stat.num} suffix={stat.suffix} duration={2500} />
-                                                    </div>
-                                                    <div className="text-sm opacity-80">{stat.label}</div>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Become a Partner */}
-                            <div>
-                                <div className="max-w-3xl mx-auto text-center">
-                                    <Handshake className="h-16 w-16 mx-auto text-accent-purple mb-6" />
-                                    <h2 className="text-3xl font-bold mb-4">Partner With Us</h2>
-                                    <p className="text-lg text-muted-foreground mb-8">
-                                        Are you an organisation looking to improve cultural competence in dementia care? We'd love to explore how we can work together.
-                                    </p>
-                                    <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                        {[
-                                            { title: "Training Partnerships", desc: "Deliver cultural competence training to your staff" },
-                                            { title: "Research Collaborations", desc: "Engage diverse communities in your research" },
-                                            { title: "Corporate Sponsorship", desc: "Support our mission through CSR initiatives" }
-                                        ].map((item, i) => (
-                                            <Card key={i} className="border-accent-purple/20">
-                                                <CardContent className="pt-6 text-center">
-                                                    <h3 className="font-bold mb-2">{item.title}</h3>
-                                                    <p className="text-sm text-muted-foreground">{item.desc}</p>
-                                                </CardContent>
-                                            </Card>
-                                        ))}
-                                    </div>
-                                    <Link href="/contact">
-                                        <Button size="lg" className="bg-accent-purple text-white hover:bg-accent-purple/90">
-                                            Get in Touch <ArrowRight className="ml-2 h-4 w-4" />
-                                        </Button>
-                                    </Link>
                                 </div>
                             </div>
                         </TabsContent>

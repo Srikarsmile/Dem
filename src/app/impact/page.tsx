@@ -12,7 +12,7 @@ export default function Impact() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-coral/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">Stories & Impact</h1>
                     <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">Real stories. Real change. Real impact.</p>
@@ -41,7 +41,7 @@ export default function Impact() {
             </section>
 
             {/* Carer Stories */}
-            <section className="py-20 bg-muted/30">
+            <section className="py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight mb-4">Carer Stories</h2>
@@ -95,10 +95,10 @@ export default function Impact() {
                                     { text: "Community members who had never spoken about dementia publicly were sharing stories.", author: "Committee Member, Southall Temple" }
                                 ].map((quote, i) => (
                                     <div key={i} className="flex gap-4">
-                                        <div className="min-w-1 w-1 bg-accent-purple rounded-full" />
+                                        <div className="min-w-1 w-1 bg-[#5d9b97] rounded-full" />
                                         <div>
                                             <p className="italic text-foreground/80 mb-1">"{quote.text}"</p>
-                                            <p className="text-xs font-bold text-accent-purple">{quote.author}</p>
+                                            <p className="text-xs font-bold text-[#2e8b8f]">{quote.author}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -113,7 +113,7 @@ export default function Impact() {
             </section>
 
             {/* Milestones Timeline */}
-            <section className="py-20 bg-muted/30">
+            <section className="py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <h2 className="text-3xl font-bold text-center mb-16">Our Journey</h2>
                     <div className="max-w-3xl mx-auto space-y-8 relative before:absolute before:inset-0 before:ml-5 md:before:ml-[50%] before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
@@ -162,7 +162,7 @@ export default function Impact() {
             </section>
 
             {/* Reports */}
-            <section className="py-20 bg-muted/50">
+            <section className="py-20 bg-[#c4dcdc]/30">
                 <div className="container px-4 md:px-6 text-center">
                     <h2 className="text-2xl font-bold mb-8">Transparency & Reports</h2>
                     <div className="flex flex-wrap justify-center gap-6">

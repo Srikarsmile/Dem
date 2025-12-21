@@ -56,48 +56,15 @@ export function Navbar() {
         { name: 'Contact', path: '/contact', icon: Mail },
     ];
 
-    // Get color for each page path
-    const getPageColor = (path: string) => {
-        if (path === '/about') return 'purple';
-        if (path === '/our-story') return 'teal';
-        if (path === '/our-founder') return 'blue';
-        if (path === '/news') return 'blue';
-        if (path === '/impact') return 'coral';
-        if (path === '/support' || path === '/donate') return 'coral';
-        if (path === '/professional-services') return 'purple';
-        if (path === '/contact') return 'teal';
-        if (path === '/') return 'teal';
-        return 'teal';
+    // Get color for each page path - now using consistent brand teal
+    const getPageColor = () => {
+        return 'teal'; // All pages use brand teal for consistency
     };
 
-    // Dynamic navbar color based on page - each page gets unique color
+    // Dynamic navbar color based on page - using consistent brand teal
     const getNavbarClasses = () => {
-        if (pathname === '/about') {
-            return 'border-accent-purple/20 bg-gradient-to-r from-background via-background to-accent-purple/10';
-        }
-        if (pathname === '/our-story') {
-            return 'border-accent-teal/20 bg-gradient-to-r from-background via-background to-accent-teal/10';
-        }
-        if (pathname === '/our-founder') {
-            return 'border-accent-blue/20 bg-gradient-to-r from-background via-background to-accent-blue/10';
-        }
-        if (pathname === '/news') {
-            return 'border-accent-blue/20 bg-gradient-to-r from-background via-background to-accent-blue/10';
-        }
-        if (pathname === '/impact') {
-            return 'border-accent-coral/20 bg-gradient-to-r from-background via-background to-accent-coral/10';
-        }
-        if (pathname === '/support' || pathname === '/donate') {
-            return 'border-accent-coral/20 bg-gradient-to-r from-background via-background to-accent-coral/10';
-        }
-        if (pathname === '/professional-services') {
-            return 'border-accent-purple/20 bg-gradient-to-r from-background via-background to-accent-purple/10';
-        }
-        if (pathname === '/contact') {
-            return 'border-accent-teal/20 bg-gradient-to-r from-background via-background to-accent-teal/10';
-        }
-        // Default teal for homepage and other pages
-        return 'border-accent-teal/20 bg-gradient-to-r from-background via-background to-accent-teal/10';
+        // All pages use consistent brand teal styling
+        return 'border-[#9bdbd9]/30 bg-gradient-to-r from-background via-background to-[#dffffe]/30';
     };
 
     return (
@@ -118,16 +85,10 @@ export function Navbar() {
                 {/* Center: Desktop Navigation */}
                 <nav className="hidden lg:flex items-center justify-center gap-6 flex-1">
                     {mainLinks.map((link) => {
-                        const color = getPageColor(link.path);
-                        const hoverClass = color === 'purple' ? 'hover:text-accent-purple' :
-                            color === 'blue' ? 'hover:text-accent-blue' :
-                                color === 'coral' ? 'hover:text-accent-coral' : 'hover:text-accent-teal';
-                        const activeClass = color === 'purple' ? 'text-accent-purple' :
-                            color === 'blue' ? 'text-accent-blue' :
-                                color === 'coral' ? 'text-accent-coral' : 'text-accent-teal';
-                        const underlineClass = color === 'purple' ? 'bg-accent-purple' :
-                            color === 'blue' ? 'bg-accent-blue' :
-                                color === 'coral' ? 'bg-accent-coral' : 'bg-accent-teal';
+                        // Use consistent brand teal for all links
+                        const hoverClass = 'hover:text-[#2e8b8f]';
+                        const activeClass = 'text-[#2e8b8f]';
+                        const underlineClass = 'bg-[#5d9b97]';
 
                         return (
                             <Link
@@ -147,17 +108,15 @@ export function Navbar() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-accent-teal bg-transparent transition-colors duration-300">
+                                <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-[#2e8b8f] bg-transparent transition-colors duration-300">
                                     Support
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[300px] gap-2 p-4">
                                         {supportLinks.map((link) => {
-                                            const color = getPageColor(link.path);
-                                            const hoverBg = color === 'purple' ? 'hover:bg-accent-purple/10' :
-                                                color === 'coral' ? 'hover:bg-accent-coral/10' : 'hover:bg-accent-teal/10';
-                                            const hoverText = color === 'purple' ? 'hover:text-accent-purple' :
-                                                color === 'coral' ? 'hover:text-accent-coral' : 'hover:text-accent-teal';
+                                            // Use consistent brand teal for all dropdown items
+                                            const hoverBg = 'hover:bg-[#dffffe]';
+                                            const hoverText = 'hover:text-[#2e8b8f]';
 
                                             return (
                                                 <li key={link.path}>
@@ -183,17 +142,15 @@ export function Navbar() {
                     <NavigationMenu>
                         <NavigationMenuList>
                             <NavigationMenuItem>
-                                <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-accent-teal bg-transparent transition-colors duration-300">
+                                <NavigationMenuTrigger className="text-sm font-medium text-muted-foreground hover:text-[#2e8b8f] bg-transparent transition-colors duration-300">
                                     More
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent>
                                     <ul className="grid w-[300px] gap-2 p-4">
                                         {moreLinks.map((link) => {
-                                            const color = getPageColor(link.path);
-                                            const hoverBg = color === 'blue' ? 'hover:bg-accent-blue/10' :
-                                                color === 'coral' ? 'hover:bg-accent-coral/10' : 'hover:bg-accent-teal/10';
-                                            const hoverText = color === 'blue' ? 'hover:text-accent-blue' :
-                                                color === 'coral' ? 'hover:text-accent-coral' : 'hover:text-accent-teal';
+                                            // Use consistent brand teal for all dropdown items
+                                            const hoverBg = 'hover:bg-[#dffffe]';
+                                            const hoverText = 'hover:text-[#2e8b8f]';
 
                                             return (
                                                 <li key={link.path}>
@@ -217,32 +174,32 @@ export function Navbar() {
 
                     <Link
                         href="/contact"
-                        className={`text-sm font-medium transition-all duration-300 hover:text-accent-teal relative group py-1 ${pathname === '/contact' ? 'text-accent-teal' : 'text-muted-foreground'
+                        className={`text-sm font-medium transition-all duration-300 hover:text-[#2e8b8f] relative group py-1 ${pathname === '/contact' ? 'text-[#2e8b8f]' : 'text-muted-foreground'
                             }`}
                     >
                         Contact
-                        <span className={`absolute -bottom-1 left-0 w-0 h-[3px] bg-accent-teal rounded-full transition-all duration-300 group-hover:w-full ${pathname === '/contact' ? 'w-full' : ''
+                        <span className={`absolute -bottom-1 left-0 w-0 h-[3px] bg-[#5d9b97] rounded-full transition-all duration-300 group-hover:w-full ${pathname === '/contact' ? 'w-full' : ''
                             }`} />
                     </Link>
                 </nav>
 
                 {/* Right: Donate Button (Desktop) */}
                 <div className="hidden lg:block shrink-0">
-                    <Link href="/donate">
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" target="_blank" rel="noopener noreferrer">
                         <Button className="bg-accent-coral hover:bg-accent-coral/90 text-white rounded-full px-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
                             Donate
                         </Button>
-                    </Link>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}
                 <div className="lg:hidden flex items-center gap-3 ml-auto">
-                    <Link href="/donate">
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" target="_blank" rel="noopener noreferrer">
                         <Button size="sm" className="bg-accent-coral hover:bg-accent-coral/90 text-white rounded-full px-4 shadow-md">
                             <Heart className="h-4 w-4 mr-1.5 fill-current" />
                             Donate
                         </Button>
-                    </Link>
+                    </a>
                     <Sheet open={isOpen} onOpenChange={setIsOpen}>
                         <SheetTrigger asChild>
                             <Button variant="ghost" size="icon" className="text-foreground">
@@ -332,12 +289,12 @@ export function Navbar() {
 
                             {/* Donate CTA */}
                             <div className="p-4 mt-auto border-t border-border">
-                                <Link href="/donate" onClick={() => setIsOpen(false)}>
+                                <a href="https://www.paypal.com/donate/?hosted_button_id=992DZB3FLENTE" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>
                                     <Button className="w-full bg-accent-coral hover:bg-accent-coral/90 text-white h-12 text-base font-semibold shadow-lg">
                                         <Heart className="h-5 w-5 mr-2 fill-current" />
                                         Donate Now
                                     </Button>
-                                </Link>
+                                </a>
                                 <p className="text-xs text-center text-muted-foreground mt-3">
                                     Registered Charity: 1196886
                                 </p>

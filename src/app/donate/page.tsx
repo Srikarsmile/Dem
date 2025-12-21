@@ -11,7 +11,7 @@ export default function Donate() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-coral/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">Support Our Work</h1>
                     <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">Help us champion cultural carers and transform dementia care.</p>
@@ -23,7 +23,7 @@ export default function Donate() {
                 <div className="container px-4 md:px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div className="space-y-6">
-                            <div className="inline-block px-3 py-1 rounded-full bg-accent-coral/10 text-accent-coral text-sm font-medium">Make a Difference</div>
+                            <div className="inline-block px-3 py-1 rounded-full bg-[#c4dcdc] text-[#2e8b8f] text-sm font-medium">Make a Difference</div>
                             <h2 className="text-3xl font-bold">Why Your Support Matters</h2>
                             <p className="text-lg text-muted-foreground">
                                 Dementia care is in crisis, and families from cultural communities are often hitting barriers of language, stigma, and systemic bias.
@@ -60,7 +60,7 @@ export default function Donate() {
             </section>
 
             {/* Where Your Money Goes */}
-            <section className="py-20 bg-muted/30">
+            <section className="py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl font-bold tracking-tight mb-4">Where Your Money Goes</h2>
@@ -96,11 +96,11 @@ export default function Donate() {
             <section className="py-20">
                 <div className="container px-4 md:px-6">
                     <div className="max-w-4xl mx-auto">
-                        <Card className="border-2 border-accent-teal/30 bg-accent-teal/5">
+                        <Card className="border-2 border-[#9bdbd9] bg-[#dffffe]">
                             <CardContent className="p-8 md:p-12">
                                 <div className="grid md:grid-cols-2 gap-8 items-center">
                                     <div>
-                                        <div className="inline-block px-3 py-1 rounded-full bg-accent-teal text-white text-sm font-bold mb-4">
+                                        <div className="inline-block px-3 py-1 rounded-full bg-[#2e8b8f] text-white text-sm font-bold mb-4">
                                             UK Taxpayers Only
                                         </div>
                                         <h2 className="text-3xl font-bold mb-4">Gift Aid</h2>
@@ -138,7 +138,7 @@ export default function Donate() {
             </section>
 
             {/* Ways to Give */}
-            <section className="py-20 bg-muted/30">
+            <section className="py-20 bg-white">
                 <div className="container px-4 md:px-6">
                     <h2 className="text-3xl font-bold text-center mb-16">Other Ways to Give</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">

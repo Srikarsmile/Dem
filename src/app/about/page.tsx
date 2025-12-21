@@ -10,7 +10,7 @@ export default function About() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-purple/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">About Dignitate</h1>
                     <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
@@ -75,7 +75,7 @@ export default function About() {
             </section>
 
             {/* Mission & Vision */}
-            <section className="py-12 md:py-20 bg-muted/30">
+            <section className="py-12 md:py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
                         {/* Mission */}
@@ -91,7 +91,7 @@ export default function About() {
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     <p className="text-muted-foreground leading-relaxed">
-                                        Dignitate's mission is to place dementia and caring within cultural communities at the heart of health equity. We empower carers and families—often unseen and underserved—to access support, share experiences, and sustain their wellbeing alongside those they care for.
+                                        Dignitate's mission is to place dementia and caring within cultural communities at the heart of health equity. We empower carers and families - often unseen and underserved - to access support, share experiences, and sustain their wellbeing alongside those they care for.
                                     </p>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Through culturally competent approaches, preventative care, and peer-led networks, we work to reduce stigma, dismantle barriers to access, and build bridges between communities and services.
@@ -105,15 +105,15 @@ export default function About() {
                             <Card className="border-none shadow-lg h-full">
                                 <CardHeader className="pb-4">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <div className="p-2 rounded-lg bg-accent-purple/10">
-                                            <Eye className="h-6 w-6 text-accent-purple" />
+                                        <div className="p-2 rounded-lg bg-[#c4dcdc]">
+                                            <Eye className="h-6 w-6 text-[#2e8b8f]" />
                                         </div>
                                         <CardTitle className="text-2xl">Our Vision</CardTitle>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                     <p className="text-muted-foreground leading-relaxed">
-                                        We envision a future where dementia and caring are recognised as shared human experiences, free from stigma or marginalisation. In this future, carers—particularly from culturally diverse backgrounds—are supported, empowered, and celebrated for the vital role they play.
+                                        We envision a future where dementia and caring are recognised as shared human experiences, free from stigma or marginalisation. In this future, carers - particularly from culturally diverse backgrounds - are supported, empowered, and celebrated for the vital role they play.
                                     </p>
                                     <p className="text-muted-foreground leading-relaxed">
                                         Dignitate strives to be a catalyst for change, where health and social systems respond with equity and cultural understanding.
@@ -183,7 +183,7 @@ export default function About() {
             </section>
 
             {/* Our Story Preview */}
-            <section className="py-12 md:py-20 bg-muted/30">
+            <section className="py-12 md:py-20 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <FadeInOnScroll>
                         <div className="max-w-4xl mx-auto">
@@ -195,7 +195,7 @@ export default function About() {
                                         <br /><br />
                                         Trust me, you get through it, and we are here to support you. We are here to help you make those memories. If we have you both laughing and hugging each other, then this has all been worth it . . ."
                                     </blockquote>
-                                    <p className="text-center font-bold text-primary">— Malcolm Gill, Founder</p>
+                                    <p className="text-center font-bold text-[#2e8b8f]">- Malcolm Gill, Founder</p>
                                     <div className="text-center mt-8">
                                         <Link href="/our-story">
                                             <Button variant="outline" size="lg">Read Our Full Story &rarr;</Button>
@@ -208,28 +208,14 @@ export default function About() {
                 </div>
             </section>
 
-            {/* Partners CTA */}
-            <section className="py-16 bg-muted/30">
-                <div className="container px-4 md:px-6 text-center">
-                    <FadeInOnScroll>
-                        <h2 className="text-3xl font-bold tracking-tight mb-4">Working Together</h2>
-                        <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-                            We're proud to work alongside leading organisations including NHS Our Future Health,
-                            community groups, and faith organisations across the UK.
-                        </p>
-                        <Link href="/professional-services?tab=partnerships">
-                            <Button size="lg" className="bg-accent-teal hover:bg-accent-teal/90 text-white">View Our Partners</Button>
-                        </Link>
-                    </FadeInOnScroll>
-                </div>
-            </section>
+
 
             {/* CTA Section */}
             <section className="py-16 bg-primary text-primary-foreground">
                 <div className="container px-4 md:px-6 text-center">
                     <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
                     <p className="text-lg opacity-90 max-w-2xl mx-auto mb-8">
-                        Whether you're a carer seeking support, a professional wanting to learn, or someone who wants to make a difference—we welcome you.
+                        Whether you're a carer seeking support, a professional wanting to learn, or someone who wants to make a difference - we welcome you.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link href="/support">

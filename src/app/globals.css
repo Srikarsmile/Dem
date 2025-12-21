@@ -44,11 +44,15 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
-  --color-accent-teal: #20c997;
+  --color-accent-teal: #5d9b97;
+  --color-accent-teal-dark: #2e8b8f;
+  --color-accent-teal-light: #9bdbd9;
+  --color-accent-teal-muted: #c4dcdc;
   --color-accent-purple: #845ef7;
   --color-accent-coral: #ff6b6b;
   --color-accent-blue: #4dabf7;
-  --color-bg-warm: #fffbf0;
+  --color-bg-warm: #dffffe;
+  --color-bg-teal-soft: #dffffe;
 }
 
 :root {
@@ -66,8 +70,8 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0.02 260);
 
-  /* Primary: Dark Teal from Logo ~#1A5F6A -> oklch(0.45 0.09 210) */
-  --primary: oklch(0.45 0.09 210);
+  /* Primary: Brand Dark Teal #2e8b8f */
+  --primary: #2e8b8f;
   --primary-foreground: oklch(0.985 0 0);
 
   /* Secondary: Dark Slate */
@@ -79,8 +83,8 @@
   --muted-foreground: oklch(0.55 0.02 210);
   /* Slate-Teal gray */
 
-  --accent: oklch(0.95 0.03 210);
-  /* Light cyan tint */
+  /* Brand Light Teal #c4dcdc */
+  --accent: #c4dcdc;
   --accent-foreground: oklch(0.2 0.02 260);
 
   --destructive: oklch(0.577 0.245 27.325);
@@ -88,8 +92,8 @@
 
   --border: oklch(0.92 0.01 210);
   --input: oklch(0.92 0.01 210);
-  --ring: oklch(0.45 0.09 210);
-  /* Teal Ring */
+  /* Brand Teal Ring #5d9b97 */
+  --ring: #5d9b97;
 
   --chart-1: oklch(0.45 0.09 210);
   --chart-2: oklch(0.60 0.12 210);
@@ -106,17 +110,25 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  /* Custom Variables - Softened/Harmonized */
-  --accent-teal: #359CA6;
-  /* Mid Teal */
+  /* Custom Variables - Brand Colors from Canva Brand Kit */
+  --accent-teal: #5d9b97;
+  /* Primary Brand Teal */
+  --accent-teal-dark: #2e8b8f;
+  /* Dark Brand Teal */
+  --accent-teal-light: #9bdbd9;
+  /* Aqua/Cyan */
+  --accent-teal-muted: #c4dcdc;
+  /* Light Teal */
   --accent-purple: #7986CB;
   /* Soft Indigo */
   --accent-coral: #E57373;
   /* Soft Red */
   --accent-blue: #64B5F6;
   /* Soft Blue */
-  --bg-warm: #F0F9FA;
-  /* Very light cyan tint instead of warm yellow */
+  --bg-warm: #dffffe;
+  /* Very light cyan - Brand Color */
+  --bg-teal-soft: #dffffe;
+  /* Alias for brand background */
 }
 
 .dark {

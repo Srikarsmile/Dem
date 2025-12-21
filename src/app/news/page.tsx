@@ -15,6 +15,22 @@ export default function News() {
     // News and updates - including content from LinkedIn and legacy site
     const newsItems = [
         {
+            date: "May 2024",
+            category: "Event",
+            title: "Dementia Dialogues",
+            excerpt: "A special event during Dementia Awareness Week featuring guest speakers with lived experience in dementia care, healthcare professionals, and a creative artist exploring art in dementia.",
+            icon: Mic,
+            link: "/news/dementia-dialogues"
+        },
+        {
+            date: "May 2024",
+            category: "Community",
+            title: "Woman's Day at Dignitate",
+            excerpt: "Upholding Resilience: Celebrating the strength of Black women amidst adversity and the power of safe spaces like EmpowerHer for support and empowerment.",
+            icon: Heart,
+            link: "/news/womans-day-at-dignitate"
+        },
+        {
             date: "November 2024",
             category: "Fundraising",
             title: "London Marathon 2026 - Chris Lockwood Running for Dignitate",
@@ -30,10 +46,35 @@ export default function News() {
             icon: Mic
         },
         {
-            date: "June 2021",
+            date: "November 2023",
+            category: "Healthcare",
+            title: "Addressing the Dementia Diagnosis Disparity",
+            excerpt: "A Call for Equitable Healthcare - More than half of local authority districts in England are failing to meet the government's target dementia diagnosis rate of 66.7%.",
+            icon: Heart,
+            link: "/news/dementia-diagnosis-disparity"
+        },
+        {
+            date: "November 2023",
+            category: "Feature",
+            title: "\"I want to help beat dementia.\"",
+            excerpt: "Malcolm Gill joined 'Our Future Health' – the UK's largest health research programme – to help advance dementia research and create a better future for carers and patients alike.",
+            icon: Heart,
+            link: "/news/beat-dementia"
+        },
+        {
+            date: "July 2023",
+            category: "Event",
+            title: "Our future health. House of Lords event.",
+            excerpt: "I had the opportunity to attend a UK parliamentary event organized by Our Future Health at the House of Lords on 5 July. We engaged with influential MPs who joined us in discovering the transformative power of the research.",
+            icon: Building,
+            link: "/news/house-of-lords",
+            highlight: true
+        },
+        {
+            date: "June 2023",
             category: "Event",
             title: "Carers Wellbeing Event to Kick Off UK Carers Week",
-            excerpt: "A FREE online event from 2pm-4pm featuring speakers including Malcolm Gill, Dr Nnanna Oparaeche, Karia Von V tok, and Funmi Olutoye - giving carers the chance to learn how to stay healthy.",
+            excerpt: "A successful event centred around person-centred caregiving, cultural stigmas, and dementia awareness - bringing carers together to learn and support one another.",
             icon: Heart,
             link: "/news/carers-wellbeing-event"
         },
@@ -70,7 +111,7 @@ export default function News() {
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-b from-accent-blue/10 to-transparent">
+            <section className="pt-32 pb-16 bg-gradient-to-b from-[#c4dcdc] to-transparent">
                 <div className="container px-4 md:px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 animate-in fade-in slide-in-from-bottom-4 duration-700">News & Updates</h1>
                     <p className="text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150 max-w-2xl mx-auto">
@@ -80,7 +121,7 @@ export default function News() {
             </section>
 
             {/* Recent Events Section */}
-            <section className="py-12 bg-gradient-to-br from-emerald-50 to-teal-50">
+            <section className="py-12 bg-gradient-to-br from-[#dffffe] to-[#c4dcdc]/50">
                 <div className="container px-4 md:px-6">
                     <FadeInOnScroll>
                         <div className="text-center mb-8">
@@ -90,41 +131,41 @@ export default function News() {
                     </FadeInOnScroll>
 
                     <FadeInOnScroll delay={150}>
-                        <Card className="max-w-4xl mx-auto border-2 border-emerald-500/30 bg-gradient-to-br from-white to-emerald-50/50 mb-12">
+                        <Card className="max-w-4xl mx-auto border-2 border-[#9bdbd9] bg-gradient-to-br from-white to-[#dffffe]/50 mb-12">
                             <CardContent className="p-8">
                                 <div className="grid md:grid-cols-2 gap-6 items-center">
-                                    <div className="relative aspect-square rounded-xl overflow-hidden shadow-lg">
+                                    <div className="relative rounded-xl overflow-hidden shadow-lg">
                                         <Image
-                                            src="/images/every-dish-has-a-story.jpg"
+                                            src="/images/every-dish-story-v2.jpg"
                                             alt="Every Dish Has A Story Event"
-                                            fill
-                                            sizes="(max-width: 768px) 100vw, 50vw"
-                                            className="object-cover"
+                                            width={600}
+                                            height={800}
+                                            className="w-full h-auto object-contain"
                                         />
                                     </div>
                                     <div className="space-y-4">
                                         <div>
-                                            <span className="inline-block px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-bold uppercase mb-2">
+                                            <span className="inline-block px-3 py-1 rounded-full bg-[#2e8b8f] text-white text-xs font-bold uppercase mb-2">
                                                 ✓ Event Completed
                                             </span>
-                                            <h3 className="text-2xl font-bold mb-2">Every Dish Has A Story</h3>
+                                            <h3 className="text-2xl font-bold mb-2">Every Dish Has a Story: Culture, Memory, and Connection</h3>
                                             <p className="text-muted-foreground text-sm mb-4">
-                                                Successfully brought generations together through culture, stories, and shared meals. Part of the Intergenerational 2.0 project.
+                                                Every Dish Has a Story is a Dignitate initiative that uses food as a powerful gateway to memory, identity, and connection. Bringing together carers, older people, and community members, the programme creates safe, culturally familiar spaces where stories are shared, relationships are strengthened, and stigma around dementia is gently reduced. By centring cultural food traditions, lived experience, and intergenerational exchange, the project supports emotional wellbeing, reduces isolation, and helps carers feel seen long before crisis point. It reflects Dignitate’s belief that prevention begins with connection - and that dignity is preserved when people are understood in the fullness of their life story.
                                             </p>
                                         </div>
                                         <div className="space-y-2 text-sm">
                                             <div className="flex items-center gap-2">
-                                                <Calendar className="h-4 w-4 text-emerald-600" />
+                                                <Calendar className="h-4 w-4 text-[#2e8b8f]" />
                                                 <span className="font-medium">Held on 31st May 2025, Saturday</span>
                                             </div>
                                             <div className="flex items-center gap-2">
-                                                <Calendar className="h-4 w-4 text-emerald-600" />
+                                                <Calendar className="h-4 w-4 text-[#2e8b8f]" />
                                                 <span>1:00 PM – 4:00 PM</span>
                                             </div>
                                         </div>
                                         <div className="flex gap-3 pt-2">
                                             <Link href="/impact">
-                                                <Button className="bg-emerald-600 hover:bg-emerald-700 text-white">View Impact</Button>
+                                                <Button className="bg-[#2e8b8f] hover:bg-[#2e8b8f]/90 text-white">View Impact</Button>
                                             </Link>
                                             <a href="mailto:support@dignitate.co.uk">
                                                 <Button variant="outline">Learn More</Button>
@@ -153,7 +194,7 @@ export default function News() {
                                     The Carer's Table
                                 </h3>
                                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                                    In partnership with Icon Kitchen Designs, we created a night of luxury, laughter, and connection — where cultural carers were invited to simply be cared for.
+                                    In partnership with Icon Kitchen Designs, we created a night of luxury, laughter, and connection - where cultural carers were invited to simply be cared for.
                                 </p>
                             </div>
 
@@ -161,7 +202,7 @@ export default function News() {
                                 <video
                                     controls
                                     className="w-full aspect-video"
-                                    poster="/images/every-dish-has-a-story.jpg"
+                                    poster="/images/every-dish-story-v2.jpg"
                                 >
                                     <source src="/videos/carers-table-event.mp4" type="video/mp4" />
                                     Your browser does not support the video tag.
@@ -170,9 +211,71 @@ export default function News() {
 
                             <div className="mt-6 text-center">
                                 <blockquote className="text-lg italic text-muted-foreground max-w-3xl mx-auto">
-                                    "At Dignitate, we know cultural carers often give so much of themselves, with little time to pause. That's why we created The Carer's Table — because carers deserve to be cared for too."
+                                    "At Dignitate, we know cultural carers often give so much of themselves, with little time to pause. That's why we created The Carer's Table - because carers deserve to be cared for too."
                                 </blockquote>
-                                <p className="mt-3 font-bold text-accent-purple">— Malcolm Gill, Founder</p>
+                                <p className="mt-3 font-bold text-accent-purple">- Malcolm Gill, Founder</p>
+                            </div>
+                        </div>
+                    </FadeInOnScroll>
+                </div>
+            </section>
+
+            {/* Community Highlights - Video Grid */}
+            <section className="py-12 bg-white">
+                <div className="container px-4 md:px-6">
+                    <FadeInOnScroll delay={200}>
+                        <div className="text-center mb-8">
+                            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Community Highlights</h2>
+                            <p className="text-muted-foreground">Moments of connection and joy from our recent gatherings.</p>
+                        </div>
+                        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                            <div className="space-y-4">
+                                <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black aspect-[9/16] md:aspect-video">
+                                    <video
+                                        controls
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src="/videos/event-highlight-1.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <p className="text-center font-medium text-gray-700">Community Gathering</p>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black aspect-[9/16] md:aspect-video">
+                                    <video
+                                        controls
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src="/videos/event-highlight-2.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <p className="text-center font-medium text-gray-700">Shared Stories</p>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black aspect-[9/16] md:aspect-video">
+                                    <video
+                                        controls
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src="/videos/event-highlight-3.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <p className="text-center font-medium text-gray-700">Workshop Moments</p>
+                            </div>
+                            <div className="space-y-4">
+                                <div className="relative rounded-2xl overflow-hidden shadow-lg bg-black aspect-[9/16] md:aspect-video">
+                                    <video
+                                        controls
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src="/videos/event-highlight-4.mp4" type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <p className="text-center font-medium text-gray-700">Cultural Connection</p>
                             </div>
                         </div>
                     </FadeInOnScroll>
@@ -194,7 +297,7 @@ export default function News() {
                                     Breaking Barriers Through Art
                                 </h3>
                                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                                    Bringing generations together through creativity — elders and young people painting, sharing stories, and building connections.
+                                    Bringing generations together through creativity - elders and young people painting, sharing stories, and building connections.
                                 </p>
                             </div>
 
@@ -280,66 +383,71 @@ export default function News() {
             </section>
 
             {/* News Grid */}
-            <section className="py-20">
+            <section className="py-20 bg-gradient-to-b from-[#f5f5f5] to-white">
                 <div className="container px-4 md:px-6">
                     <FadeInOnScroll>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                            {newsItems.map((item, i) => {
-                                const hasLink = item.link || item.externalLink;
-                                const cardContent = (
-                                    <Card key={i} className={`group hover:shadow-lg transition-all h-full ${hasLink ? 'cursor-pointer' : ''}`}>
-                                        <CardHeader>
-                                            <div className="flex items-center justify-between mb-2">
-                                                <span className="text-xs font-bold text-primary uppercase tracking-wider">{item.category}</span>
-                                                <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors">
-                                                    <item.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                            {newsItems
+                                .filter((item) => item.link || item.externalLink)
+                                .map((item, i) => {
+                                    const cardContent = (
+                                        <Card key={i} className={`group hover:shadow-xl transition-all h-full cursor-pointer bg-white rounded-2xl shadow-lg ${item.highlight ? 'border-2 border-[#2e8b8f] ring-4 ring-[#2e8b8f]/10 relative overflow-hidden' : ''}`}>
+                                            {item.highlight && (
+                                                <div className="absolute top-0 right-0 bg-[#2e8b8f] text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10 uppercase tracking-widest">
+                                                    Impact
                                                 </div>
-                                            </div>
-                                            <CardTitle className="text-lg leading-tight">{item.title}</CardTitle>
-                                            <CardDescription className="flex items-center gap-1">
-                                                <Calendar className="h-3 w-3" />
-                                                {item.date}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent>
-                                            <p className="text-sm text-muted-foreground">{item.excerpt}</p>
-                                            {item.link && (
-                                                <p className="text-sm font-medium text-primary mt-4 group-hover:underline flex items-center gap-1">
-                                                    Read Article <ArrowRight className="h-3 w-3" />
-                                                </p>
                                             )}
-                                            {item.externalLink && (
-                                                <p className="text-sm font-medium text-primary mt-4 group-hover:underline flex items-center gap-1">
-                                                    Donate Now <ArrowRight className="h-3 w-3" />
-                                                </p>
-                                            )}
-                                        </CardContent>
-                                    </Card>
-                                );
+                                            <CardHeader>
+                                                <div className="flex items-center justify-between mb-2">
+                                                    <span className="text-xs font-bold text-primary uppercase tracking-wider">{item.category}</span>
+                                                    <div className="p-2 rounded-lg bg-muted group-hover:bg-primary/10 transition-colors">
+                                                        <item.icon className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
+                                                    </div>
+                                                </div>
+                                                <CardTitle className="text-lg leading-tight">{item.title}</CardTitle>
+                                                <CardDescription className="flex items-center gap-1">
+                                                    <Calendar className="h-3 w-3" />
+                                                    {item.date}
+                                                </CardDescription>
+                                            </CardHeader>
+                                            <CardContent>
+                                                <p className="text-sm text-muted-foreground">{item.excerpt}</p>
+                                                {item.link && (
+                                                    <p className="text-sm font-medium text-primary mt-4 group-hover:underline flex items-center gap-1">
+                                                        Read Article <ArrowRight className="h-3 w-3" />
+                                                    </p>
+                                                )}
+                                                {item.externalLink && (
+                                                    <p className="text-sm font-medium text-primary mt-4 group-hover:underline flex items-center gap-1">
+                                                        Donate Now <ArrowRight className="h-3 w-3" />
+                                                    </p>
+                                                )}
+                                            </CardContent>
+                                        </Card>
+                                    );
 
-                                if (item.link) {
-                                    return (
-                                        <Link key={i} href={item.link} className="block">
-                                            {cardContent}
-                                        </Link>
-                                    );
-                                } else if (item.externalLink) {
-                                    return (
-                                        <a key={i} href={item.externalLink} target="_blank" rel="noopener noreferrer" className="block">
-                                            {cardContent}
-                                        </a>
-                                    );
-                                } else {
-                                    return cardContent;
-                                }
-                            })}
+                                    if (item.link) {
+                                        return (
+                                            <Link key={i} href={item.link} className="block">
+                                                {cardContent}
+                                            </Link>
+                                        );
+                                    } else if (item.externalLink) {
+                                        return (
+                                            <a key={i} href={item.externalLink} target="_blank" rel="noopener noreferrer" className="block">
+                                                {cardContent}
+                                            </a>
+                                        );
+                                    }
+                                    return null;
+                                })}
                         </div>
                     </FadeInOnScroll>
                 </div>
             </section>
 
             {/* Newsletter Signup */}
-            <section className="py-20 bg-gradient-to-br from-gray-100 to-gray-200">
+            <section className="py-20 bg-gradient-to-br from-[#dffffe] to-[#c4dcdc]">
                 <div className="container px-4 md:px-6">
                     <FadeInOnScroll>
                         <div className="max-w-2xl mx-auto text-center">
@@ -366,36 +474,6 @@ export default function News() {
                 </div>
             </section>
 
-            {/* Categories */}
-            <section className="py-16">
-                <div className="container px-4 md:px-6">
-                    <FadeInOnScroll>
-                        <h2 className="text-2xl font-bold text-center mb-8">Browse by Category</h2>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            {["All", "Community", "Events", "Training", "Partnerships", "Innovation", "Recognition"].map((cat, i) => (
-                                <Button key={i} variant={i === 0 ? "default" : "outline"} size="sm" className="rounded-full">
-                                    {cat}
-                                </Button>
-                            ))}
-                        </div>
-                    </FadeInOnScroll>
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-16 bg-accent-blue text-white">
-                <div className="container px-4 md:px-6 text-center">
-                    <FadeInOnScroll>
-                        <h2 className="text-2xl font-bold mb-4">Have a Story to Share?</h2>
-                        <p className="opacity-90 mb-6">
-                            We'd love to hear from carers, partners, and community members.
-                        </p>
-                        <Link href="/contact">
-                            <Button className="bg-white text-accent-blue hover:bg-white/90">Get in Touch</Button>
-                        </Link>
-                    </FadeInOnScroll>
-                </div>
-            </section>
 
             {/* Image Lightbox */}
             <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>

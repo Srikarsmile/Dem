@@ -1,17 +1,43 @@
 'use client';
 
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Heart, Users, Mic, Handshake } from 'lucide-react';
+import { Mail, Phone, MapPin, Heart, Users, Mic, Handshake, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { FadeInOnScroll } from '@/components/Parallax';
-
+import { sendContactEmail } from '@/app/actions/contact';
+import { toast } from 'sonner';
 
 export default function Contact() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+        event.preventDefault();
+        setIsSubmitting(true);
+
+        const formData = new FormData(event.currentTarget);
+
+        try {
+            const result = await sendContactEmail(formData);
+
+            if (result.success) {
+                toast.success('Message sent successfully! We will get back to you soon.');
+                (event.target as HTMLFormElement).reset();
+            } else {
+                toast.error(result.error || 'Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            toast.error('Failed to send message. Please check your connection.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    }
+
     return (
         <div className="flex flex-col min-h-screen">
             {/* Page Header */}
@@ -23,7 +49,7 @@ export default function Contact() {
             </section>
 
             {/* Quick Contact Paths */}
-            <section className="py-12 bg-muted/30">
+            <section className="py-12 bg-[#dffffe]">
                 <div className="container px-4 md:px-6">
                     <div className="text-center mb-12">
                         {/* <span className="text-accent-blue font-semibold uppercase tracking-wider text-sm">How Can We Help?</span> */}
@@ -100,7 +126,7 @@ export default function Contact() {
                                 <h3 className="font-bold mb-2">Join Our Newsletter</h3>
                                 <p className="text-sm text-muted-foreground mb-4">Stay updated on events, resources, and the Cultural Carers movement.</p>
                                 <form className="flex gap-2">
-                                    <Input placeholder="Your email address" type="email" required className="bg-background" />
+                                    <Input placeholder="Your email address" name="newsletter_email" type="email" required className="bg-background" />
                                     <Button type="submit">Subscribe</Button>
                                 </form>
                             </div>
@@ -113,10 +139,10 @@ export default function Contact() {
                                 <CardDescription>Fill out the form below and we'll get back to you as soon as possible.</CardDescription>
                             </CardHeader>
                             <CardContent>
-                                <form className="space-y-4">
+                                <form className="space-y-4" onSubmit={handleSubmit}>
                                     <div className="space-y-2">
                                         <Label htmlFor="type">I am a... *</Label>
-                                        <Select required>
+                                        <Select name="type" required>
                                             <SelectTrigger>
                                                 <SelectValue placeholder="Please select" />
                                             </SelectTrigger>
@@ -133,30 +159,43 @@ export default function Contact() {
                                     <div className="grid grid-cols-2 gap-4">
                                         <div className="space-y-2">
                                             <Label htmlFor="fname">First Name *</Label>
-                                            <Input id="fname" required placeholder="Jane" />
+                                            <Input id="fname" name="fname" required placeholder="Jane" />
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="lname">Last Name *</Label>
-                                            <Input id="lname" required placeholder="Doe" />
+                                            <Input id="lname" name="lname" required placeholder="Doe" />
                                         </div>
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="email">Email *</Label>
-                                        <Input id="email" type="email" required placeholder="jane@example.com" />
+                                        <Input id="email" name="email" type="email" required placeholder="jane@example.com" />
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="phone">Phone (Optional)</Label>
-                                        <Input id="phone" type="tel" />
+                                        <Input id="phone" name="phone" type="tel" />
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="message">Message *</Label>
-                                        <Textarea id="message" required placeholder="How can we help you?" className="min-h-[150px]" />
+                                        <Textarea id="message" name="message" required placeholder="How can we help you?" className="min-h-[150px]" />
                                     </div>
 
-                                    <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90" size="lg">Send Message</Button>
+                                    <Button
+                                        className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                                        size="lg"
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? (
+                                            <>
+                                                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                                Sending...
+                                            </>
+                                        ) : (
+                                            'Send Message'
+                                        )}
+                                    </Button>
                                 </form>
                             </CardContent>
                         </Card>
