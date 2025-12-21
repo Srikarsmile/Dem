@@ -342,10 +342,7 @@ export default function Home() {
                   <BookOpen className="h-6 w-6 text-[#5d9b97] shrink-0" />
                   <span><strong>Education</strong> – Stay informed with valuable knowledge that will empower both you and your families.</span>
                 </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="h-6 w-6 text-[#2e8b8f] shrink-0" />
-                  <span><strong>Signposting</strong> – Get connected with trustworthy sources of help and advice.</span>
-                </li>
+
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-[#5d9b97] shrink-0" />
                   <span><strong>Who we are working with</strong> – Discover collaborations and the wonderful organisations that share our journey.</span>
