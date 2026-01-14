@@ -92,7 +92,7 @@ export default function Impact() {
                                 {[
                                     { text: "We're now identifying dementia earlier in communities that were previously underserved.", author: "Memory Clinic Lead, NHS Trust" },
                                     { text: "Our care home staff now feel equipped to have sensitive conversations with families.", author: "Care Home Manager, West Midlands" },
-                                    { text: "Community members who had never spoken about dementia publicly were sharing stories.", author: "Committee Member, Southall Temple" }
+                                    { text: "Community members who had never spoken about dementia publicly were sharing stories.", author: "Committee Member, West London Temple" }
                                 ].map((quote, i) => (
                                     <div key={i} className="flex gap-4">
                                         <div className="min-w-1 w-1 bg-[#5d9b97] rounded-full" />
